@@ -1,0 +1,50 @@
+<html>
+<script id="allow-copy_script">
+    (function agent() {
+        let unlock = false
+        document.addEventListener('allow_copy', (event) => {
+            unlock = event.detail.unlock
+        })
+
+        const copyEvents = [
+            'copy',
+            'cut',
+            'contextmenu',
+            'selectstart',
+            'mousedown',
+            'mouseup',
+            'mousemove',
+            'keydown',
+            'keypress',
+            'keyup',
+        ]
+        const rejectOtherHandlers = (e) => {
+            if (unlock) {
+                e.stopPropagation()
+                if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+            }
+        }
+        copyEvents.forEach((evt) => {
+            document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+                capture: true,
+            })
+        })
+    })()
+</script>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<title>Difft</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<a href="https://file-1307206075.file.myqcloud.com/wea/wea-desktop-mac-latest.dmg" target="_self">Download MacOS
+    Version</a>
+</body>
+</html>
