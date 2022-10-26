@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body  {
-            background-image: url("img.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
     <meta charset="UTF-8">
     <title>Chative Invitation</title>
 </head>
@@ -33,10 +26,10 @@
             font-size: 30px;
             border-radius: 16px;
             color: white;
-" href="https://apps.apple.com/hk/app/chative/id6443719300?l=en" >Install in AppStore</button>
+" onclick="window.location.replace('https://apps.apple.com/hk/app/chative/id6443719300?l=en')" >Install on AppStore</button>
     </div>
     <div  style="position: relative; width: 100%; height: 50%; left: 0px; top: 50%; background: #056FFA;border-radius: 0px 44px 0px 0px;">
-       <div onclick="window.location.replace(appurl) ">
+       <div onclick="window.location.replace(appurl)">
         <div style="
             position: absolute;
             font-family: SF Pro;
@@ -63,15 +56,6 @@
 </div>
 </body>
 <script defer>
-    // Compose the scheme URL.
-    url = new URLSearchParams(window.location.search);
-    i = url.get("i");
-    appurl = "chative://invite/?a=i&i=" + i;
-    // document.getElementById("launchapp").href=appurl;
-
-    // Call the app automatically.
-    window.location.replace(appurl);
-
     function isWechat() {
         let ua = navigator.userAgent.toLowerCase(), flag = false;
         if(ua.indexOf("micromessenger") > -1){
@@ -120,20 +104,23 @@
         }
     }
 
+    // Compose the scheme URL.
+    url = new URLSearchParams(window.location.search);
+    i = url.get("i");
+    appurl = "chative://invite/?a=i&i=" + i;
 
+    // Call the app automatically.
+    window.location.replace(appurl);
 
     // Guide the user to open this page with browsers if the container is Wechat.
     if (isWechat()) {
         showWechatGuide();
     }
     if (isIosOrAndroid() === 'Android'){
-      window.location.href = 'androidIndex.html?a=i&i='+i;
-    }
-    if (isIosOrAndroid() === 'Ios'){
-      location.href = 'index.html?a=i&i='+i;
+        window.location.href = 'androidIndex.html?a=i&i='+i;
     }
     if (isPc()){
-      window.location.href = 'desktopIndex.html?a=i&i='+i;
+        window.location.href = 'desktopIndex.html?a=i&i='+i;
     }
 </script>
 </html>

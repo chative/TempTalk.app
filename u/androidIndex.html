@@ -34,13 +34,38 @@
    </div>
 </body>
 <script>
+    function isIosOrAndroid(){
+        let ua = navigator.userAgent;
+        if (/(Android)/i.test(ua)){
+            return 'Android';
+        }
+        if (/(iPhone|iPad|ipod|iOS)/i.test(ua)){
+            return 'Ios';
+        }
+    }
+    function isPc(){
+        let ua = navigator.userAgent;
+        let Agents = new Array("Android","iPhone","iPad","iPod","SymbianOS","Windows Phone");
+        let flag = true;
+        for (let i = 0; i < Agents.length; i++) {
+            if (ua.indexOf(Agents[i]) > 0){
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
     url = new URLSearchParams(window.location.search);
     i = url.get("i");
     appurl = "chative://invite/index.html?a=i&i=" + i;
-    // document.getElementById("launchapp").href=appurl;
 
-    // Call the app automatically.
-    // window.location.replace(appurl);
+    if (isIosOrAndroid() === 'Ios'){
+        window.location.href = 'index.html?a=i&i='+i;
+    }
+    if (isPc()){
+        window.location.href = 'desktopIndex.html?a=i&i='+i;
+    }
 
     var qrWidth = 500;
     var qrHeight = 500;
@@ -57,7 +82,5 @@
         colorLight: '#ffffff',
     })
     $("#qrcode canvas")[0].getContext('2d').drawImage($("#logo")[0],(qrWidth - logoWidth)/2,(qrHeight - logoHeight)/2,logoWidth,logoHeight);
-
-
 </script>
 </html>
