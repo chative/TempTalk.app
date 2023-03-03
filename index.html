@@ -1,155 +1,181 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>chative</title>
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900"> -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/main.css?v=3.8">
-        <link rel="stylesheet" href="css/navbar-zll.css">
-    </head>
-    <body>
-      <div class="heaher">
-          <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#navbar-menu">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>chative</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900"> -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="css/main.css?v=3.8" rel="stylesheet">
+    <link href="css/navbar-zll.css" rel="stylesheet">
+    <script type="module">
+        function isPc() {
+            let ua = navigator.userAgent;
+            let Agents = new Array("Android", "iPhone", "iPad", "iPod", "SymbianOS", "Windows Phone");
+            let flag = true;
+            for (let i = 0; i < Agents.length; i++) {
+                if (ua.indexOf(Agents[i]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+        if (!isPc()) {
+            window.location.href = 'index_m.html';
+        }
+    </script>
+</head>
+<body>
+<div class="heaher">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target="#navbar-menu" data-toggle="collapse" type="button">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="" class="navbar-brand"><img src="images/logos.png" class="mr-1" /></a>
-              </div>
-              <div class="navbar-collapse collapse" id="navbar-menu">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="">Features</a></li>
-                    <li><a href="">Technical Info</a></li>
-                    <li><a href="">About Us</a></li>
-                </ul>
-              </div>
+                <a class="navbar-brand" href="index.html"><img class="mr-1" src="images/logos.png"/></a>
             </div>
-          </nav>      
-      </div>
-      <div class="container">
-        <div class="row" style="margin-bottom: 20px;">
-            <div class="col-lg-7 banner_index">
-              <p class="p1">
+            <div class="navbar-collapse collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="col-lg-7 banner_index">
+            <p class="p1">
                 Chative is a security & privacy focused chat app.
-              </p>
-              <p class="p2">
-                We, humans, have natural ways to communicate. We say things to each other in private, then we forget over time. Chative is here to do that digitally.
-              </p>
-              <div class="bnner_btn">
-                <div class="btn-group" role="group" aria-label="..." style="float: left;">
-                  <button type="button" class="btn  bnner-btn-right">Download for Mac</button>
-                  <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default dropdown-toggle bnner-btn-left" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                      <span class="mac_name">Intel</span>
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" style="width:78px;">
-                      <li><a href="#" class="dropdown-val" style="background:#001C4E">Intel</a></li>
-                      <li><a href="#" class="dropdown-val">M1</a></li>
-                    </ul>
-                  </div>
+            </p>
+            <p class="p2">
+                We, humans, have natural ways to communicate. We say things to each other in private, then we forget
+                over time. Chative is here to do that digitally.
+            </p>
+            <div class="bnner_btn">
+                <div aria-label="..." class="btn-group" role="group" style="float: left;">
+                    <button class="btn  bnner-btn-right" type="button">Download for Mac</button>
+                    <div class="btn-group" role="group">
+                        <button aria-expanded="false" aria-haspopup="true"
+                                class="btn btn-default dropdown-toggle bnner-btn-left" data-toggle="dropdown" type="button">
+                            <span class="mac_name">Intel</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="width:78px;">
+                            <li><a class="dropdown-val" href="#" style="background:#001C4E">Intel</a></li>
+                            <li><a class="dropdown-val" href="#">M1</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="qcode">
-                  <a href="https://apps.apple.com/us/app/chative-messenger/id6443719300"><img src="images/app_store.png" class="app_store" /></a>
-                  <img src="images/qrcode.png" class="app_store_q" />
+                    <a href="https://apps.apple.com/us/app/chative-messenger/id6443719300"><img
+                            class="app_store" src="images/app_store.png"/></a>
+                    <img class="app_store_q" src="images/qrcode.png"/>
                 </div>
-                <a href=""><img src="images/google_play.png" class="google_play" style="display: none;" /></a>
-              </div>
-            </div>
-            <div class="col-lg-5 banner_index">
-              <img src="images/banner-left.png" class="left_img" />
+                <a href=""><img class="google_play" src="images/google_play.png" style="display: none;"/></a>
             </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4">
+        <div class="col-lg-5 banner_index">
+            <img class="left_img" src="images/banner-left.png"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
             <div class="card1">
-              <img src="images/tabler_shield-lock.png" alt="" class="chard_img">
-              <div class="card_p1">
-                Chative is fully encrypted end-to-end. All your messages are fully encrypted in-transit or at rest.
-              </div>
+                <img alt="" class="chard_img" src="images/tabler_shield-lock.png">
+                <div class="card_p1">
+                    Chative is fully encrypted end-to-end. All your messages are fully encrypted in-transit or at rest.
+                </div>
             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card2">
-              <img src="images/uil_archive.png" alt="" class="chard_img">
-              <div class="card_p2">
-                Chative does not store your messages, not on the server side, and not on the client side.
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card3">
-              <img src="images/tabler_file-zip.png" alt="" class="chard_img">
-              <div class="card_p2">
-                Chative does not store metadata. Once a message is delivered, no other info about the message is kept.
-              </div>
-            </div>
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-lg-4">
-            <div class="card4">
-              <img src="images/tabler_cloud-lock-open.png" alt="" class="chard_img">
-              <div class="card_p2">
-                Chative is open-source from Signal. We believe secure apps should be transparent in how they work.
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card5">
-              <img src="images/tabler_qrcode.png" alt="" class="chard_img">
-              <div class="card_p1">
-                You can invite or connect with friends with a unique link or QR code.
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card6">
-              <img src="images/tabler_brand-mailgun.png" alt="" class="chard_img">
-              <div class="card_p1">
-                Chative does not require a phone number. You can register on Chative with an email address.
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="row con_end">
-            <div class="con_end_p">
-              There are many other unique features of Chative, <br>but if you read this far, why don’t you try it for yourself.
+        <div class="col-lg-4">
+            <div class="card2">
+                <img alt="" class="chard_img" src="images/uil_archive.png">
+                <div class="card_p2">
+                    Chative does not store your messages, not on the server side, and not on the client side.
+                </div>
             </div>
-            <div class="btn-group bnner_btn" role="group" aria-label="...">
-              <button type="button" class="btn  bnner-btn-right">Download for Mac</button>
-              <div class="btn-group" role="group">
-                <button type="button" class="btn  dropdown-toggle bnner-btn-left" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  <span class="mac_name">Intel</span>
-                  <span class="caret"></span>
+        </div>
+        <div class="col-lg-4">
+            <div class="card3">
+                <img alt="" class="chard_img" src="images/tabler_file-zip.png">
+                <div class="card_p2">
+                    Chative does not store metadata. Once a message is delivered, no other info about the message is
+                    kept.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card4">
+                <img alt="" class="chard_img" src="images/tabler_cloud-lock-open.png">
+                <div class="card_p2">
+                    Chative is open-source from Signal. We believe secure apps should be transparent in how they work.
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card5">
+                <img alt="" class="chard_img" src="images/tabler_qrcode.png">
+                <div class="card_p1">
+                    You can invite or connect with friends with a unique link or QR code.
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card6">
+                <img alt="" class="chard_img" src="images/tabler_brand-mailgun.png">
+                <div class="card_p1">
+                    Chative does not require a phone number. You can register on Chative with an email address.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row con_end">
+        <div class="con_end_p">
+            There are many other unique features of Chative, <br>but if you read this far, why don’t you try it for
+            yourself.
+        </div>
+        <div aria-label="..." class="btn-group bnner_btn" role="group">
+            <button class="btn  bnner-btn-right" type="button">Download for Mac</button>
+            <div class="btn-group" role="group">
+                <button aria-expanded="false" aria-haspopup="true" class="btn  dropdown-toggle bnner-btn-left"
+                        data-toggle="dropdown" type="button">
+                    <span class="mac_name">Intel</span>
+                    <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" style="width:78px;">
-                  <li><a href="#" class="dropdown-val" style="background:#001C4E">Intel</a></li>
-                  <li><a href="#" class="dropdown-val">M1</a></li>
+                    <li><a class="dropdown-val" href="#" style="background:#001C4E">Intel</a></li>
+                    <li><a class="dropdown-val" href="#">M1</a></li>
                 </ul>
-              </div>
             </div>
         </div>
-      </div>
-      <footer class="bs-docs-footer">
-        <div class="container">
-          <div class="col-lg-6 footer_p">
+    </div>
+</div>
+<footer class="bs-docs-footer">
+    <div class="container">
+        <div class="col-lg-6 footer_p">
             <p>For more help, contact help@chative.com</p>
-           <a href="https://chative.com/legal.html" style="color: #ffffff;"> <p>Chative © 2022-2023 , Terms & Privacy Policy</p></a>
-          </div>
-          <div class="col-lg-6">
-            <img src="images/footer2.png" class="footer_img_1" />
-            <img src="images/footer_1.png" class="footer_img_2" />
-          </div>
+            <a href="https://chative.com/legal.html" style="color: #ffffff;"><p>Chative © 2022-2023 , Terms & Privacy
+                Policy</p></a>
         </div>
-      </footer>
-      <script type="text/javascript" src="js/index.js"></script>
-  </body>
+        <div class="col-lg-6">
+            <img class="footer_img_1" src="images/footer2.png"/>
+            <img class="footer_img_2" src="images/footer_1.png"/>
+        </div>
+    </div>
+</footer>
+<script src="js/index.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+</body>
 </html>
