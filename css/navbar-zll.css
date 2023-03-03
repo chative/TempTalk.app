@@ -1,0 +1,409 @@
+body{
+    padding-top: 70px; 
+    background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
+    /* min-height: 100%; */
+    /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  */
+}
+
+.hearder{
+    background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
+}
+.navbar-brand img{
+    width: 24px;
+    height: auto;
+    float: left;
+    margin-top: -5px
+}
+.navbar-brand{
+    width: 200px;
+}
+.navbar-brand a{
+    outline: none;
+    text-decoration: none;
+}
+.navbar-brand span{
+    display: block;
+    float: left;
+}
+.navbar-default{
+    background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
+}
+.container{
+    margin: 0 auto;
+}
+.banner_index{
+    height: 692px;
+    /* background-color: #ccc; */
+}
+/* .banner_index img{
+    position: absolute;
+    width: 470px;
+    height: 550.54px;
+    right: 2px;
+    top: 53px;
+} */
+.left_img{
+    position: absolute;
+    width: 470px;
+    height: auto;
+    right: 2px;
+    top: 53px;
+}
+.p1{
+    margin-top: 200px;
+  
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+
+    color: #001C4E;
+}
+.p2{
+    margin-top: 30px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #181A20;
+}
+.bnner_btn{
+    margin-top: 40px;
+}
+.bnner-btn-right{
+    justify-content: center;
+    align-items: center;
+    border-color: #ccc;
+    padding: 12px 16px;
+    width: 151px;
+    height: 44px;
+    background: #181A20;
+    border-radius: 8px 0px 0px 8px;
+}
+.bnner-btn-left{
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    width: 76px;
+    height: 44px;
+    background: #181A20;
+    border-radius: 0px 8px 8px 0px;
+    border-color: #ccc;
+}
+.dropdown-menu{
+    min-width: 78px;
+    background: #1E2329;
+}
+.dropdown-menu>li>a{
+    
+    color: #FFFFFF;
+}
+.dropdown-menu>li>a:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #181A20;
+    color: #FFFFFF;
+}
+/* .bnner-btn-right :active{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #181A20;
+    color:red;
+    
+} */
+.bnner_btn button{
+    background: #181A20;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 510;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    height: 44px;
+}
+.app_store{
+    width: 133px;
+    height: auto;
+}
+.app_store_q{
+    width: 123px;
+    height: auto;  
+    margin: 0px auto;
+    display: none;
+}
+.qcode{
+    background-color: #000000;
+    border-radius: 8px;
+    margin-left: 15px;
+    width: 133px;
+    text-align: center;
+    display: block;
+    float: left;
+    height: auto;
+    /* padding-bottom: 10px; */
+}
+
+
+.google_play{
+    width: 148.5px;
+    margin-left: 15px;
+    height: auto;
+}
+.bnner_btn button:hover{
+    background: #181A20;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 510;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    height: 44px;
+}
+
+.navbar-default{
+    background-color: #FFFFFF;
+    border: 0px;
+    margin-top: 0px;
+   
+}
+.navbar-default .navbar-brand{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22.4262px;
+    line-height: 17px;
+    color: #1E2329;
+}
+ 
+.navbar-default .navbar-nav>li>a {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 510;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 510;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(8, 2, 2, 0.781);
+    /* border-bottom: 1px solid #000000; */
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000000;
+}
+ 
+.navbar-default .navbar-toggle:hover {
+    background-color: #FFFFFF;
+}
+.navbar-toggle{
+    margin-top:15px;
+    border: 0px;
+}
+
+
+.card1{
+    margin-top: 32px;
+    padding: 32px;
+    width: 352px;
+    height: 320px;
+    background: #056FFA;
+    border-radius: 40px 40px 0px 40px;
+    
+}
+.card2{
+    margin: 0px auto;
+    margin-top: 32px; 
+    padding: 32px;
+    width: 352px;
+    height: 320px;
+    background: #EBF7FF;
+    border-radius: 40px 40px 40px 0px;
+}
+.card3{
+    margin-top: 32px;
+    padding: 32px;
+    float: left;
+    width: 352px;
+    height: 320px;
+
+    background: #EBF7FF;
+    border-radius: 40px 0px 40px 40px;
+}
+.card4{
+    margin-top: 32px;
+    padding: 32px;
+    width: 352px;
+    height: 320px;
+    background: #EBF7FF;
+    border-radius: 40px 0px 40px 40px;
+}
+.card5{
+    margin-top: 32px;
+    padding: 32px;
+    width: 352px;
+    height: 320px;
+    background: #056FFA;
+    border-radius: 40px 0px 40px 40px;
+
+}
+.card6{
+    margin-top: 32px;
+    padding: 32px;
+    width: 352px;
+    height: 320px;
+    background: #056FFA;
+    border-radius: 40px 40px 0px 40px;
+}
+.chard_img{
+    width: 20px;
+    height: auto;
+}
+.card_p1{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    width: 290px;
+    height: 100px;
+    position:absolute;
+    bottom: 32px;
+    display: flex;
+    align-items: flex-end;
+}
+.card_p2{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1E2329;
+    width: 290px;
+    height: 100px;
+    position:absolute;
+    bottom: 32px;
+    display: flex;
+    align-items: flex-end;
+}
+.con_end{
+    text-align: center;
+}
+.con_end_p{
+    /* width: 785px; */
+    margin: 0px auto;
+    margin-top: 128px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+.bs-docs-footer{
+    padding-top: 32px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    height: 115px;
+    color: #99979c;
+    background-color: #181A20;
+  
+}
+.footer_p{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    color: #EAECEF;
+    font-size: 14px;
+    line-height: 20px;
+}
+.footer_img_1{
+    width: 20px;
+    margin-left: 27px;
+    height: auto;
+    float: right;
+}
+.footer_img_2{
+    width: 20px;
+    height: auto;
+    float: right;
+}
+
+/* 内容页 */
+.list_title{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.article_list{
+    margin-left: 25px;
+    margin-top: 10px;
+    position: fixed;
+}
+.list-group{
+    width: 200px;
+    background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
+}
+.list-group-item{
+    background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    width: 220px;
+    border: 0px;
+    margin-top:16px;
+}
+
+.article_a{
+    color: #474D57;
+}
+.article_active{
+    color: #056FFA;
+}
+
+.detail_title{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #181A20;
+}
+.article_content{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 16px;
+    height: auto;
+    color: #181A20;
+}
+.add_date{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+.article_content>.content{
+    margin-top: 32px;
+}
