@@ -17,11 +17,14 @@ $(document).ready(function(){
     });
     $(".bnner-btn-left").click(function () {
       $(this).css({ "background": "#181A20","color":"#FFFFFF"});
+      $(".dropdown-menu").show();
     });
     $('.dropdown-val').click(function(){
       $(".mac_name").html($(this).html());
       $('.dropdown-val').css({background:"#1E2329"});
       $(this).css({background:"#001C4E"});
+      
+      $(".dropdown-menu").hide();
       return false;
     });
     $('.dropdown-val').mouseout(function(){
