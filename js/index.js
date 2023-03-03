@@ -6,6 +6,13 @@ $(document).ready(function(){
       $(this).css({ "opacity": "100%" });
     });
     $(".bnner-btn-right").click(function () {
+      var info = $(".mac_name").html();
+      if( info == "Intel"){
+        window.open("https://pkg-1307206075.file.myqcloud.com/dmg/chative-desktop-mac-x64-latest-2.7.23021501.dmg");
+      }else{
+        window.open("https://pkg-1307206075.file.myqcloud.com/dmg/chative-desktop-mac-arm64-latest-2.7.23021501.dmg");
+      }
+   
       $(this).css({ "background": "#181A20","color":"#FFFFFF"});
       return false;
     });
