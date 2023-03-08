@@ -12,7 +12,7 @@ body{
     width: 114px;
     height: auto;
     float: left;
-    margin-top: -5px
+    margin-top: 0px
 }
 .navbar-brand{
     width: 200px;
@@ -78,12 +78,20 @@ body{
 .bnner-btn-right{
     justify-content: center;
     align-items: center;
+    border: 0px 0px 0px 1px;
     border-color: #ccc;
     padding: 12px 16px;
     width: 151px;
     height: 44px;
     background: #181A20;
     border-radius: 8px 0px 0px 8px;
+    margin-right: 1px;
+}
+.btn{
+    border: 0px;
+    border-right: 1px solid #ccc;
+    /* border-color: #ccc; */
+    /* border: 1px solid #ccc; */
 }
 .bnner-btn-left{
     justify-content: center;
@@ -93,17 +101,19 @@ body{
     height: 44px;
     background: #181A20;
     border-radius: 0px 8px 8px 0px;
-    border-color: #ccc;
+    border-color: #181A20;
 }
 .dropdown-menu{
     min-width: 78px;
     background: #1E2329;
 }
 .dropdown-menu>li>a{
+    line-height: 34px;
     
     color: #FFFFFF;
 }
 .dropdown-menu>li>a:hover{
+    cursor:pointer;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #181A20;
     color: #FFFFFF;
 }
@@ -179,7 +189,7 @@ body{
 .navbar-default .navbar-nav>li>a {
     font-family: 'Helvetica Neue';
     font-style: normal;
-    font-weight: 510;
+    font-weight: 550;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -187,7 +197,7 @@ body{
 .navbar-default .navbar-nav>li>a:hover{
     font-family: 'Helvetica Neue';
     font-style: normal;
-    font-weight: 510;
+    font-weight: 550;
     font-size: 16px;
     line-height: 24px;
     color: rgba(8, 2, 2, 0.781);
@@ -331,9 +341,36 @@ body{
     height: auto;
     float: right;
 }
+.footer_img_1:hover{
+    width: 20px;
+    margin-left: 27px;
+    /* background: #FFFFFF;: #FFFFFF; */
+    cursor:pointer;
+    height: auto;
+    float: right;
+}
 .footer_img_2{
     width: 20px;
+    margin-left: 27px;
     height: auto;
+    float: right;
+}
+.footer_img_2:hover{
+    width: 20px;
+    margin-left: 27px;
+    cursor:pointer;
+    height: auto;
+    float: right;
+}
+.footer_img_3{
+    width: 20px;
+    height: auto;
+    float: right;
+}
+.footer_img_3:hover{
+    width: 20px;
+    height: auto;
+    cursor:pointer;
     float: right;
 }
 

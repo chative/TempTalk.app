@@ -44,7 +44,7 @@ body{
     width: 114px;
     height: auto;
     float: left;
-    margin-top: -5px
+    margin-top: 1px
 }
 .navbar-brand{
     width: 200px;
@@ -210,7 +210,7 @@ body{
 .navbar-default .navbar-nav>li>a {
     font-family: 'Helvetica Neue';
     font-style: normal;
-    font-weight: 510;
+    font-weight: 550;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -218,7 +218,7 @@ body{
 .navbar-default .navbar-nav>li>a:hover{
     font-family: 'Helvetica Neue';
     font-style: normal;
-    font-weight: 510;
+    font-weight: 550;
     font-size: 16px;
     line-height: 24px;
     color: rgba(8, 2, 2, 0.781);
@@ -369,6 +369,18 @@ body{
     width: 20px;
     height: auto;
     margin: 0px auto;
+}
+.footer_img_3{
+    width: 20px;
+    margin-right: 27px;
+    height: auto;
+    
+}
+.footer_img_3:hover{
+    width: 20px;
+    height: auto;
+    cursor:pointer;
+    
 }
 
 /* 内容页 */

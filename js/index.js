@@ -26,14 +26,33 @@ $(document).ready(function(){
       $(this).css({ "background": "#181A20","color":"#FFFFFF"});
       // $(".dropdown-menu").show();
     });
+
     $('.dropdown-val').click(function(){
       $(".mac_name").html($(this).html());
+      var mac_name = $(this).html();
       $('.dropdown-val').css({background:"#1E2329"});
       $(this).css({background:"#001C4E"});
+      // $('.dropdown-val').each(function(index,domEle){
+      //   if($(domEle).html() == mac_name){
+      //     $(".dropdown-val:eq("+index+")").css({background:"#001C4E"});
+      //   }else{
+      //     $(".dropdown-val:eq("+index+")").css({background:"#1E2329"});
+      //   }
+      // })
+    });
+    $('.dropdown-val').mouseover(function(){
+      $(this).css({color:"#FFFFFF","background":"linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #181A20"});
     });
     $('.dropdown-val').mouseout(function(){
-      $(this).css({color:"#FFFFFF"});
+      if($(this).html() == $(".mac_name").html()){
+        $('.dropdown-val').css({background:"#1E2329"});
+        $(this).css({background:"#001C4E"});
+      }else{
+        $(this).css({color:"#FFFFFF","background":"#1E2329"});
+      }
     });
+
+
     $(".app_store").mouseover(function(){
       $(".qcode").css({"padding-bottom":"5px"});
       $(".app_store_q").show();
