@@ -29,10 +29,11 @@ $(document).ready(function(){
 
     $('.dropdown-val').click(function(){
       $(".mac_name").html($(this).html());
-      var mac_name = $(this).html();
-      $('.dropdown-val').css({background:"#1E2329"});
-      $(this).css({background:"#001C4E"});
+      // var mac_name = $(this).html()+"1";
+      // $('.dropdown-val').css({background:"#1E2329"});
+      // $(this).css({background:"#001C4E"});
       // $('.dropdown-val').each(function(index,domEle){
+      //   console.log(mac_name);
       //   if($(domEle).html() == mac_name){
       //     $(".dropdown-val:eq("+index+")").css({background:"#001C4E"});
       //   }else{
