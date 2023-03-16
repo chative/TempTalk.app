@@ -56,15 +56,11 @@
         return flag;
     }
 
-    url = new URLSearchParams(window.location.search);
-    i = url.get("i");
-    appurl = "chative://invite/index.html?a=i&i=" + i;
-
+    params = new URLSearchParams(window.location.search).toString();
     if (isIosOrAndroid() === 'Ios'){
-        window.location.href = 'index.html?a=i&i='+i;
-    }
-    if (isPc()){
-        window.location.href = 'desktopIndex.html?a=i&i='+i;
+        window.location.href = 'index.html?' + params;
+    } else if (isPc()){
+        window.location.href = 'desktopIndex.html?' + params;
     }
 
     var qrWidth = 500;
@@ -74,7 +70,7 @@
 
     new QRCode(document.getElementById('qrcode'),{
         render:'canvas',
-        text: "https://chative.difft.org/u/index.html?a=i&i="+i,
+        text: "https://chative.com/u/index.html?" + params,
         correctLevel: QRCode.CorrectLevel.H,
         width:qrWidth,
         height:qrHeight,
