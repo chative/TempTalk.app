@@ -142,6 +142,16 @@ body{
     margin: 0px auto;
     display: none;
 }
+.app_android{
+    width: 143px;
+    height: auto;
+}
+.app_android_q{
+    width: 133px;
+    height: auto;  
+    margin: 0px auto;
+    display: none;
+}
 .qcode{
     background-color: #000000;
     border-radius: 8px;
@@ -153,7 +163,16 @@ body{
     height: auto;
     /* padding-bottom: 10px; */
 }
-
+.qcode_android{
+    background-color: #000000;
+    border-radius: 8px;
+    margin-left: 15px;
+    width: 143px;
+    text-align: center;
+    display: block;
+    float: left;
+    height: auto;
+}
 
 .google_play{
     width: 148.5px;

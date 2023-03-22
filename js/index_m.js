@@ -35,9 +35,29 @@ $(document).ready(function(){
       $(".qcode").css({"padding-bottom":"0"});
       $(".app_store_q").hide();
     });
+
+    $(".bnner-btn-right").click(function () {
+
+
+      if (null != navigator.userAgent.match(/Android/)) {
+        $(".bnner-btn-right").html("Download APK");
+        window.open("https://chative.com/d/chative-android-latest.apk");
+      } else {
+        window.open("https://apps.apple.com/us/app/chative-messenger/id6443719300");
+      }
+     
+      return false;
+    });
     // $(".navbar-toggle").click(function(){
     //     console.log("ccc");
     //     $(this).css({background:"background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;"});
     // });
+    // Detect OS version
+    if (null != navigator.userAgent.match(/Android/)) {
+      $(".bnner-btn-right").html("Download APK");
+        console.log(navigator.userAgent);
+    } else {
+      $(".bnner-btn-right").html("Install on App store");
+    }
 
   });

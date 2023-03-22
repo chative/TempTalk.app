@@ -8,9 +8,11 @@ $(document).ready(function(){
     $(".bnner-btn-right").click(function () {
       var info = $(".mac_name").html();
       if( info == "Intel"){
-        window.open("https://file-1307206075.file.myqcloud.com/chative/chative-desktop-mac-x64-latest.dmg");
+        //window.open("https://file-1307206075.file.myqcloud.com/chative/chative-desktop-mac-x64-latest.dmg");
+        window.open("https://chative.com/d/chative-desktop-mac-x64-latest.dmg");
       }else{
-        window.open("https://file-1307206075.file.myqcloud.com/chative/chative-desktop-mac-arm64-latest.dmg");
+        //window.open("https://file-1307206075.file.myqcloud.com/chative/chative-desktop-mac-arm64-latest.dmg");
+        window.open("https://chative.com/d/chative-desktop-mac-arm64-latest.dmg");
       }
    
       $(this).css({ "background": "#181A20","color":"#FFFFFF"});
@@ -61,6 +63,14 @@ $(document).ready(function(){
     $(".app_store").mouseout(function(){
       $(".qcode").css({"padding-bottom":"0"});
       $(".app_store_q").hide();
+    });
+    $(".app_android").mouseover(function(){
+      $(".qcode_android").css({"padding-bottom":"5px"});
+      $(".app_android_q").show();
+    });
+    $(".app_android").mouseout(function(){
+      $(".qcode_android").css({"padding-bottom":"0"});
+      $(".app_android_q").hide();
     });
 
     // Detect OS version
