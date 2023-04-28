@@ -31,7 +31,7 @@
         <img class="user_pic" src="images/user_pic.png">
         <!-- 有安装APP -->
         <div class="user_info" style="">
-            <p class="user_name">John Tseng</p>
+            <p class="user_name">&nbsp;</p>
             <p class="user_add_friend">Add friend on Chative</p>
             <button class="btn send_message">Sent Message</button>
         </div>
@@ -88,12 +88,24 @@
         var params = new URLSearchParams(window.location.search).toString();
         var pi = getQueryString("pi");
         if(!pi){
-            alert("无邀请码！");
+            //alert("无邀请码！");
         }
         //点击send_message 按钮
         $(".send_message").click(function(){
-            $(".user_info").hide();
-            $(".join_info").show();
+            appurl = "chative://invite/?" + params;
+            window.open(appurl);
+            var openurl = $(".download").attr("href");
+            
+            window.setTimeout(function() {
+                var timeOutDateTime = new Date();
+                if(timeOutDateTime - loadDateTime < 5000) {
+                    window.location = openurl;
+                } else {
+                    window.close();
+                }
+            },500);
+            //$(".user_info").hide();
+            //$(".join_info").show();
         });
         //点击返回按钮
         $(".join_content_cancel").click(function(){
@@ -152,13 +164,13 @@
                     //alert(msg.data.avatarContent);
                     $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
                 }else{
-                    alert("用户信息请求失败");
+                    //alert("用户信息请求失败");
                 }
                 console.log(msg);
                 //$(".user_pic").src();
             },
             error : function(){
-                alert("用户信息请求失败");
+                //alert("用户信息请求失败");
             }
         });
 
