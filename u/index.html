@@ -144,17 +144,15 @@
             type: "GET",
             dataType: 'json',
             //url: "./json/user_info.json",
-            url:"https://www.test.chative.im/v3/web/userinfo"+pi,
-            data: {
-                i:pi
-            },
+            url:"https://www.test.chative.im/v3/web/userinfo?i="+pi,
+            data: "",
             success: function(msg){
                 if(msg.reason == "OK"){
                     $(".user_name").html(msg.data.name);
                     //alert(msg.data.avatarContent);
                     $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
                 }else{
-                    alert("用互信息请求失败");
+                    alert("用户信息请求失败");
                 }
                 console.log(msg);
                 //$(".user_pic").src();
