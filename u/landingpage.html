@@ -30,13 +30,13 @@
     <div class="user-content" style="">
         <img class="user_pic" src="images/user_pic.png">
         <!-- 有安装APP -->
-        <div class="user_info" style="display: none;">
-            <p id="user_name">John Tseng</p>
-            <p id="user_add_friend">Add friend on Chative</p>
+        <div class="user_info" style="">
+            <p class="user_name">John Tseng</p>
+            <p class="user_add_friend">Add friend on Chative</p>
             <button class="btn send_message">Sent Message</button>
         </div>
         <!-- 没安装APP -->
-        <div class="join_info" style="">
+        <div class="join_info" style="display: none;">
             <div class="join_content_top">
                 <p class="join_title">Join first</p>
                 <p class="join_content">It looks like you don’t have Chative on your phone. Please download first!</p>
@@ -62,7 +62,7 @@
 </div>
 <footer class="bs-docs-footer navbar-fixed-bottom" style="bottom: 0px;">
     <div class="container" style="text-align: center;">
-       <a href="">Download App -></a>
+       <a class="download" href="">Download App -></a>
     </div>
 </footer>
 <!-- <script src="../js/index_m.js" type="text/javascript"></script> -->
@@ -91,19 +91,36 @@
             alert("无邀请码！");
             return false;
         }
-
+        //点击send_message 按钮
+        $(".send_message").click(function(){
+            $(".user_info").hide();
+            $(".join_info").show();
+        });
+        //点击返回按钮
+        $(".join_content_cancel").click(function(){
+            $(".user_info").show();
+            $(".join_info").hide();
+        });
 
         //alert(getQueryString("pi"));
         if (isIosOrAndroid() === 'Ios'){
             $(".user-content").show();
             $(".user-content_index").hide();
             $(".bs-docs-footer").show();
-            //window.location.href = 'index.html?' + params;
+            $(".download").attr("href","https://apps.apple.com/hk/app/chative/id6443719300?l=en");
+
+            $(".join_content_Download").click(function(){
+                window.open("https://apps.apple.com/hk/app/chative/id6443719300?l=en");
+            });
+
         } else if (isIosOrAndroid() === 'Android'){
             $(".user-content").show();
             $(".user-content_index").hide();
             $(".bs-docs-footer").show();
-            //window.location.href = 'androidIndex.html?' + params;
+            $(".download").attr("href","https://chative.com/d/chative-android-latest.apk");
+            $(".join_content_Download").click(function(){
+                window.open("https://chative.com/d/chative-android-latest.apk");
+            });
         }else{
             $(".user-content").hide();
             $(".user-content_index").show();
@@ -124,18 +141,32 @@
 
         //请求URL地址 https://www.test.chative.im/v3/web/userinfo?i='+pi
         //./json/user_info.json
-        // $.ajax({
-        //     type: "GET",
-        //     dataType: 'json',
-        //     url: "./json/user_info.json",
-        //     data: "",
-        //     success: function(msg){
-        //         //$(".user_pic").src();
-        //     },
-        //     error : function(){
-        //         alert("用户信息请求失败");
-        //     }
-        // });
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            //url: "./json/user_info.json",
+            url:"https://www.test.chative.im/v3/web/userinfo"+pi,
+            data: {
+                i:pi
+            },
+            success: function(msg){
+                if(msg.reason == "OK"){
+                    $(".user_name").html(msg.data.name);
+                    //alert(msg.data.avatarContent);
+                    $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                }else{
+                    alert("用互信息请求失败");
+                }
+                console.log(msg);
+                //$(".user_pic").src();
+            },
+            error : function(){
+                alert("用户信息请求失败");
+            }
+        });
+
+        appurl = "chative://invite/?" + params;
+        window.location.replace(appurl);
     });
     
     
