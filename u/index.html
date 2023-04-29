@@ -93,19 +93,12 @@
         //点击send_message 按钮
         $(".send_message").click(function(){
             appurl = "chative://invite/?" + params;
-            window.open(appurl);
+            window.location.replace(appurl);
             var openurl = $(".download").attr("href");
-            
-            window.setTimeout(function() {
-                var timeOutDateTime = new Date();
-                if(timeOutDateTime - loadDateTime < 5000) {
-                    window.location = openurl;
-                } else {
-                    window.close();
-                }
-            },500);
-            //$(".user_info").hide();
-            //$(".join_info").show();
+            setTimeout(function(){
+                $(".user_info").hide();
+                $(".join_info").show();
+            },1000);
         });
         //点击返回按钮
         $(".join_content_cancel").click(function(){
