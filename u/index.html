@@ -105,8 +105,9 @@
             $(".user_info").show();
             $(".join_info").hide();
         });
-
-        //alert(getQueryString("pi"));
+        var invite_ident = getQueryString("a");
+        var invite_code = getQueryString(invite_ident);
+      
         if (isIosOrAndroid() === 'Ios'){
             $(".user-content").show();
             $(".user-content_index").hide();
@@ -149,7 +150,7 @@
             type: "GET",
             dataType: 'json',
             //url: "./json/user_info.json",
-            url:"https://www.test.chative.im/v3/web/userinfo?i="+pi,
+            url:"/v3/web/userinfo?"+invite_ident+"="+invite_code,
             data: "",
             success: function(msg){
                 if(msg.reason == "OK"){
