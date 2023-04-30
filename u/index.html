@@ -86,10 +86,9 @@
         }
 
         var params = new URLSearchParams(window.location.search).toString();
-        var pi = getQueryString("pi");
-        if(!pi){
-            //alert("无邀请码！");
-        }
+        var invite_ident = getQueryString("a");
+        var invite_code = getQueryString(invite_ident);
+      
         //点击send_message 按钮
         $(".send_message").click(function(){
             appurl = "chative://invite/?" + params;
@@ -105,8 +104,6 @@
             $(".user_info").show();
             $(".join_info").hide();
         });
-        var invite_ident = getQueryString("a");
-        var invite_code = getQueryString(invite_ident);
       
         if (isIosOrAndroid() === 'Ios'){
             $(".user-content").show();
