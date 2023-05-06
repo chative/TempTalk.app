@@ -9,7 +9,7 @@
     <script src="../js/jquery.js" type="text/javascript"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
-    <link href="css/landingpage.css?id=668" rel="stylesheet">
+    <link href="css/landingpage.css" rel="stylesheet">
     
     <script type="module">
         
@@ -31,9 +31,9 @@
         <img class="user_pic" src="images/user_pic.png">
         <!-- 有安装APP -->
         <div class="user_info" style="">
-            <p class="user_name">&nbsp;</p>
+            <p class="user_name">John Tseng</p>
             <p class="user_add_friend">Add friend on Chative</p>
-            <button class="btn send_message">Send Message</button>
+            <button class="btn send_message">Sent Message</button>
         </div>
         <!-- 没安装APP -->
         <div class="join_info" style="display: none;">
@@ -62,7 +62,7 @@
 </div>
 <footer class="bs-docs-footer navbar-fixed-bottom" style="bottom: 0px;">
     <div class="container" style="text-align: center;">
-       <a class="download" href=""><img style="width: 20px;height: auto;margin-top: -3px;" src="./images/logo_icon.png" > &nbsp;Download App <img style="width: 12px;height: auto;" src="./images/arrow.png" ></a>
+       <a class="download" href="">Download App -></a>
     </div>
 </footer>
 <!-- <script src="../js/index_m.js" type="text/javascript"></script> -->
@@ -86,25 +86,23 @@
         }
 
         var params = new URLSearchParams(window.location.search).toString();
-        var invite_ident = getQueryString("a");
-        var invite_code = getQueryString(invite_ident);
-      
+        var pi = getQueryString("pi");
+        if(!pi){
+            alert("无邀请码！");
+            return false;
+        }
         //点击send_message 按钮
         $(".send_message").click(function(){
-            appurl = "chative://invite/?" + params;
-            window.location.replace(appurl);
-            var openurl = $(".download").attr("href");
-            setTimeout(function(){
-                $(".user_info").hide();
-                $(".join_info").show();
-            },1000);
+            $(".user_info").hide();
+            $(".join_info").show();
         });
         //点击返回按钮
         $(".join_content_cancel").click(function(){
             $(".user_info").show();
             $(".join_info").hide();
         });
-      
+
+        //alert(getQueryString("pi"));
         if (isIosOrAndroid() === 'Ios'){
             $(".user-content").show();
             $(".user-content_index").hide();
@@ -147,21 +145,23 @@
             type: "GET",
             dataType: 'json',
             //url: "./json/user_info.json",
-            url:"/v3/web/userinfo?i="+invite_code,
-            data: "",
+            url:"https://www.test.chative.im/v3/web/userinfo"+pi,
+            data: {
+                i:pi
+            },
             success: function(msg){
                 if(msg.reason == "OK"){
                     $(".user_name").html(msg.data.name);
                     //alert(msg.data.avatarContent);
                     $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
                 }else{
-                    //alert("用户信息请求失败");
+                    alert("用互信息请求失败");
                 }
                 console.log(msg);
                 //$(".user_pic").src();
             },
             error : function(){
-                //alert("用户信息请求失败");
+                alert("用户信息请求失败");
             }
         });
 

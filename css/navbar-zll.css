@@ -291,6 +291,8 @@ body{
 .chard_img{
     width: 20px;
     height: auto;
+    float: left;
+    margin-top: 2px;
 }
 .card_p1{
     font-family: 'Helvetica Neue';
@@ -462,4 +464,37 @@ body{
 }
 .article_content>.content{
     margin-top: 32px;
+}
+
+/* 新样式js */
+.content_img{
+    width: 427px;
+    height: 538px;
+}
+.content_img_div{
+    background: #EBF7FF;
+    border-radius: 80px 80px 80px 80px;
+}
+.content_card{
+    width: 330px;
+    height: 74px;
+    margin-bottom: 32px;
+}
+.content_card_p{
+    width: 300px;
+    height: 74px;
+    float: right;
+    padding-right: 5px;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 300px;
+    font-family: 'SF Pro';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: #1E2329;
+}
+.content_card_p p{
+    margin-top: 0px;
+    padding-top: 0px;
 }
