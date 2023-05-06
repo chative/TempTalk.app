@@ -146,8 +146,8 @@
         $.ajax({
             type: "GET",
             dataType: 'json',
-            url: "./json/user_info.json",
-            //url:"/v3/web/userinfo?i="+invite_code,
+            //url: "./json/user_info.json",
+            url:"/v3/web/userinfo?i="+invite_code,
             data: "",
             success: function(msg){
                 if(msg.reason == "OK"){
