@@ -113,6 +113,8 @@
 
             $(".join_content_Download").click(function(){
                 window.open("https://apps.apple.com/hk/app/chative/id6443719300?l=en");
+                $(".user_info").show();
+                $(".join_info").hide();
             });
 
         } else if (isIosOrAndroid() === 'Android'){
@@ -122,6 +124,8 @@
             $(".download").attr("href","https://chative.com/d/chative-android-latest.apk");
             $(".join_content_Download").click(function(){
                 window.open("https://chative.com/d/chative-android-latest.apk");
+                $(".user_info").show();
+                $(".join_info").hide();
             });
         }else{
             $(".user-content").hide();
