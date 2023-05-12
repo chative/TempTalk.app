@@ -79,6 +79,46 @@
                 return 'Ios';
             }
         }
+
+        function isWechat() {
+            let ua = navigator.userAgent.toLowerCase(), flag = false;
+            if(ua.indexOf("micromessenger") > -1){
+                flag = true;
+            }else {
+                flag = false;
+            }
+            return flag;
+        }
+
+        function showWechatGuide() {
+            try {
+                if (document.getElementsByClassName("j-guide").length > 0) return;
+                const e = document.createElement("div");
+                e.className = "j-guide", e.style.position = "fixed", e.style.left = "0px", e.style.top = "0px", e.style.right = "0px", e.style.bottom = "0px", e.style.backgroundColor = "rgba(0, 0, 0, 0.8)", e.style.zIndex = "99";
+                const t = new Image;
+                t.src = "wechatmasktip.png", t.style.position = "absolute", t.style.width = "550px", t.style.top = "13px", t.style.right = "24px", e.appendChild(t), e.addEventListener("touchmove", (e => {
+                    e.stopPropagation(), e.preventDefault()
+                })), e.addEventListener("click", (t => {
+                    t.stopPropagation(), t.preventDefault(), e && document.body.removeChild(e)
+                })), document.body.appendChild(e)
+            } catch (e) {
+                console.error(e)
+            }
+        }
+
+        function isPc(){
+            let ua = navigator.userAgent;
+            let Agents = new Array("Android","iPhone","iPad","iPod","SymbianOS","Windows Phone");
+            let flag = true;
+            for (let i = 0; i < Agents.length; i++) {
+                if (ua.indexOf(Agents[i]) > 0){
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
         function getQueryString(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
             var r = window.location.search.substr(1).match(reg);
@@ -169,6 +209,9 @@
             }
         });
 
+        if (isWechat()) {
+            showWechatGuide();
+        }
         appurl = "chative://invite/?" + params;
         window.location.replace(appurl);
     });
