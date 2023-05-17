@@ -32,7 +32,7 @@
         <!-- 有安装APP -->
         <div class="user_info" style="">
             <p class="user_name">&nbsp;12345678o</p>
-            <p class="user_add_friend">Clancey invites you to join the group</p>
+            <p class="user_add_friend" id="user_invites">Clancey invites you to join the group</p>
             <button class="btn send_message"> Join Group</button>
         </div>
         <!-- 没安装APP -->
@@ -228,6 +228,7 @@
             success: function(msg){
                 if(msg.reason == "OK"){
                     $(".user_name").html(msg.data.groupName);
+                    $("#user_invites").html(msg.data.inviterName+" invites you to join the group");
                     //alert(msg.data.avatarContent);
                     $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
                 }else{
