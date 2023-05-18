@@ -31,8 +31,8 @@
         <img class="user_pic" src="./images/group_pic.png">
         <!-- 有安装APP -->
         <div class="user_info" style="">
-            <p class="user_name">&nbsp;12345678o</p>
-            <p class="user_add_friend" id="user_invites">Clancey invites you to join the group</p>
+            <p class="user_name">&nbsp;</p>
+            <p class="user_add_friend" id="user_invites">&nbsp;&nbsp; invites you to join the group</p>
             <button class="btn send_message"> Join Group</button>
         </div>
         <!-- 没安装APP -->
@@ -230,7 +230,10 @@
                     $(".user_name").html(msg.data.groupName);
                     $("#user_invites").html(msg.data.inviterName+" invites you to join the group");
                     //alert(msg.data.avatarContent);
-                    $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                    if(msg.data.avatarContent != "" && msg.data.avatarContent){
+                        $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                    }
+                   
                 }else{
                     //alert("用户信息请求失败");
                 }
