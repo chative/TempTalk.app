@@ -147,6 +147,20 @@ body{
     color: #1E2329;
     cursor:pointer;
 }
+.group_error_butten{
+    width: 100%;
+    /* background: red; */
+    height: 43px;
+    /* SF/H6 */
+
+    font-family: 'SF Pro';
+    font-style: normal;
+    font-weight: 510;
+    font-size: 14px;
+    line-height: 43px;
+    color: #1E2329;
+    cursor:pointer;
+}
 .join_content_Download{
     width: 50%;
     /* background: yellow; */

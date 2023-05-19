@@ -46,6 +46,15 @@
                 <div class="join_content_Download">Download</div>
             </div>
         </div>
+        <div class="join_info" id="group_error" style="display: none;">
+            <div class="join_content_top">
+                <p class="join_title">Error</p>
+                <p class="join_content" id="group_error_content"></p>
+            </div>
+            <div class="join_content_buttom" style="line-height: 43px;">
+                <div class="group_error_butten">OK</div>
+            </div>
+        </div>
     </div>   
     <!-- 网页 -->
     <div class="user-content_index" style="">
@@ -160,6 +169,9 @@
             $(".user_info").show();
             $(".join_info").hide();
         });
+        $(".group_error_butten").click(function(){
+            window.open("https://chative.com");
+        });
       
         if (isIosOrAndroid() === 'Ios'){
             $(".user-content").show();
@@ -222,19 +234,26 @@
         $.ajax({
             type: "GET",
             dataType: 'json',
-            //url: "./json/user_info.json",
+            //url: "./json/group_error.json",
             url:"/v3/web/linkInvitationInfo?i="+invite_code,
             data: "",
             success: function(msg){
-                if(msg.reason == "OK"){
+                if(msg.status == 0){
                     $(".user_name").html(msg.data.groupName);
                     $("#user_invites").html(msg.data.inviterName+" invites you to join the group");
                     //alert(msg.data.avatarContent);
                     if(msg.data.avatarContent != "" && msg.data.avatarContent){
                         $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
                     }
-                   
                 }else{
+                    $(".user_name").html(msg.data.groupName);
+                    $("#user_invites").html(msg.data.inviterName+" invites you to join the group");
+                    if(msg.data.avatarContent != "" && msg.data.avatarContent){
+                        $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                    }
+                    $("#group_error").show();
+                    $(".user_info").hide();
+                    $("#group_error_content").html(msg.reason);
                     //alert("用户信息请求失败");
                 }
                 console.log(msg);
