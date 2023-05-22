@@ -9,7 +9,7 @@
     <script src="../js/jquery.js" type="text/javascript"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
-    <link href="css/landingpage.css?id=668" rel="stylesheet">
+    <link href="css/landingpage.css?id=68" rel="stylesheet">
     
     <script type="module">
         
@@ -28,15 +28,15 @@
 <div class="container-fluid" style="padding: 50px 15px;text-align: center;">
     <!-- 安卓ios class = user-content, mac,win class 为user-content_index -->
     <div class="user-content" style="">
-        <img class="user_pic" src="images/user_pic.png">
+        <img class="user_pic" src="./images/group_pic.png">
         <!-- 有安装APP -->
         <div class="user_info" style="">
             <p class="user_name">&nbsp;</p>
-            <p class="user_add_friend">Add friend on Chative</p>
-            <button class="btn send_message">Send Message</button>
+            <p class="user_add_friend" id="user_invites">&nbsp;&nbsp; invites you to join the group</p>
+            <button class="btn send_message"> Join Group</button>
         </div>
         <!-- 没安装APP -->
-        <div class="join_info" style="display: none;">
+        <div class="join_info"  style="display: none;">
             <div class="join_content_top">
                 <p class="join_title">Join first</p>
                 <p class="join_content">It looks like you don’t have Chative on your phone. Please download first!</p>
@@ -46,12 +46,21 @@
                 <div class="join_content_Download">Download</div>
             </div>
         </div>
+        <div  id="group_error" style="display: none;">
+            <div class="join_content_top">
+                <p class="join_title">Error</p>
+                <p class="join_content" id="group_error_content"></p>
+            </div>
+            <div class="join_content_buttom" style="line-height: 43px;">
+                <div class="group_error_butten">OK</div>
+            </div>
+        </div>
     </div>   
     <!-- 网页 -->
     <div class="user-content_index" style="">
-        <img class="user_pic" src="images/user_pic.png">
+        <img class="user_pic" src="./images/group_pic.png">
         <div class="user_info">
-            <p class="user_name">John Tseng</p>
+            <p class="user_name">&nbsp;</p>
             <!-- <img id="qrcode" src="images/qrcode.png" style="width: 240px;height: 240px;"> -->
             <div id="qrcode" style="width: 240px;height: 240px;margin: 0px auto;">
                 <img src="icon.svg" id="logo" style="display: none">
@@ -70,6 +79,21 @@
 <script type="text/javascript">
     //url : 
     $(function(){
+        function isWinOrMac(){
+            var agent = navigator.userAgent.toLowerCase();
+            var isMac = /macintosh|mac os x/i.test(navigator.userAgent);
+            if (agent.indexOf("win32") >= 0 || agent.indexOf("wow32") >= 0) {
+                return "win32";
+            }
+            if (agent.indexOf("win64") >= 0 || agent.indexOf("wow64") >= 0) {
+                return "win64";
+            }
+            if(isMac){
+                return "mac";
+            }
+        }
+        //alert(isWinOrMac());
+
         function isIosOrAndroid(){
             let ua = navigator.userAgent;
             if (/(Android)/i.test(ua)){
@@ -126,14 +150,15 @@
         }
 
         var params = new URLSearchParams(window.location.search).toString();
-        var invite_ident = getQueryString("a");
-        var invite_code = getQueryString(invite_ident);
+        //var invite_ident = getQueryString("a");
+        var invite_code = getQueryString("i");
+        //alert(params);
       
         //点击send_message 按钮
         $(".send_message").click(function(){
-            appurl = "chative://invite/?" + params;
+            appurl = "chative://group/join?inviteCode=" + invite_code;
             window.location.replace(appurl);
-            var openurl = $(".download").attr("href");
+            //var openurl = $(".download").attr("href");
             setTimeout(function(){
                 $(".user_info").hide();
                 $(".join_info").show();
@@ -143,6 +168,9 @@
         $(".join_content_cancel").click(function(){
             $(".user_info").show();
             $(".join_info").hide();
+        });
+        $(".group_error_butten").click(function(){
+            window.open("https://chative.com");
         });
       
         if (isIosOrAndroid() === 'Ios'){
@@ -168,14 +196,30 @@
                 $(".join_info").hide();
             });
         }else{
-            $(".user-content").hide();
-            $(".user-content_index").show();
-            $(".bs-docs-footer").hide();
+            if(isWinOrMac() == "mac"){
+                
+                $(".user-content").show();
+                $(".user-content").css("width","500px");
+                $(".user-content_index").hide();
+                $(".bs-docs-footer").hide();
+                $(".download").attr("href","https://apps.apple.com/hk/app/chative/id6443719300?l=en");
+
+                $(".join_content_Download").click(function(){
+                    window.open("https://chative.com");
+                    $(".user_info").show();
+                    $(".join_info").hide();
+                });
+            }else{
+                $(".user-content").hide();
+                $(".user-content_index").show();
+                $(".bs-docs-footer").hide();
+            }
+            
         }
 
         new QRCode(document.getElementById('qrcode'),{
             render:'canvas',
-            text: "https://chative.com/u/index.html?" + params,
+            text: "https://chative.com/u/g.html?" + params,
             correctLevel: QRCode.CorrectLevel.H,
             width:240,
             height:240,
@@ -190,15 +234,27 @@
         $.ajax({
             type: "GET",
             dataType: 'json',
-            //url: "./json/user_info.json",
-            url:"/v3/web/userinfo?i="+invite_code,
+            //url: "./json/group_error.json",
+            //url: "./json/group_ok.json",
+            url:"/v3/web/linkInvitationInfo?i="+invite_code,
             data: "",
             success: function(msg){
-                if(msg.reason == "OK"){
-                    $(".user_name").html(msg.data.name);
+                if(msg.status == 0){
+                    $(".user_name").html(msg.data.groupName);
+                    $("#user_invites").html(msg.data.inviterName+" invites you to join the group");
                     //alert(msg.data.avatarContent);
-                    $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                    if(msg.data.avatarContent != "" && msg.data.avatarContent){
+                        $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                    }
                 }else{
+                    $(".user_name").html(msg.data.groupName);
+                    $("#user_invites").html(msg.data.inviterName+" invites you to join the group");
+                    if(msg.data.avatarContent != "" && msg.data.avatarContent){
+                        $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                    }
+                    $("#group_error").show();
+                    $(".user_info").hide();
+                    $("#group_error_content").html(msg.reason);
                     //alert("用户信息请求失败");
                 }
                 console.log(msg);
@@ -209,11 +265,12 @@
             }
         });
 
+
         if (isWechat()) {
             showWechatGuide();
         }
-        appurl = "chative://invite/?" + params;
-        window.location.replace(appurl);
+        // appurl = "chative://invite/?" + params;
+        // window.location.replace(appurl);
     });
     
     
