@@ -124,7 +124,7 @@ body{
 } */
 .bnner_btn button{
     background: #181A20;
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 14px;
@@ -181,7 +181,7 @@ body{
 }
 .bnner_btn button:hover{
     background: #181A20;
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 14px;
@@ -206,7 +206,7 @@ body{
 }
  
 .navbar-default .navbar-nav>li>a {
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 550;
     font-size: 16px;
@@ -214,7 +214,7 @@ body{
     color: #000000;
 }
 .navbar-default .navbar-nav>li>a:hover{
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 550;
     font-size: 16px;
@@ -295,7 +295,7 @@ body{
     margin-top: 2px;
 }
 .card_p1{
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -309,7 +309,7 @@ body{
     align-items: flex-end;
 }
 .card_p2{
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -329,7 +329,7 @@ body{
     /* width: 785px; */
     margin: 0px auto;
     margin-top: 128px;
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -349,7 +349,7 @@ body{
   
 }
 .footer_p{
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     color: #EAECEF;
@@ -397,7 +397,7 @@ body{
 
 /* 内容页 */
 .list_title{
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -437,7 +437,7 @@ body{
 }
 
 .detail_title{
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -445,7 +445,7 @@ body{
     color: #181A20;
 }
 .article_content{
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -455,7 +455,7 @@ body{
     color: #181A20;
 }
 .add_date{
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -488,7 +488,7 @@ body{
     margin-top: 0px;
     padding-top: 0px;
     width: 300px;
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-size: 20px;
     line-height: 26px;
