@@ -211,6 +211,7 @@
             dataType: 'json',
             //url: "./json/user_info.json",
             //url: "./json/group_error.json",
+            //url: "./json/user_error.json",
             url:"/v3/web/userinfo?i="+invite_code,
             data: "",
             success: function(msg){
@@ -219,22 +220,12 @@
                     //alert(msg.data.avatarContent);
                     $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
                 }else{
-                    $(".user_name").html(msg.data.name);
-                    //alert(msg.data.avatarContent);
-                    if(msg.data.avatarContent != "" && msg.data.avatarContent){
-                        $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
-                    }
-
-                    
                     $("#group_error").show();
                     $("#user_error").show();
                     $(".user_info").hide();
                     $("#user_error_content").html(msg.reason);
                     $("#group_error_content").html(msg.reason);
-                    //alert("用户信息请求失败");
                 }
-                console.log(msg);
-                //$(".user_pic").src();
             },
             error : function(){
                 //alert("用户信息请求失败");
