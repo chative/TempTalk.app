@@ -99,6 +99,8 @@
             }
         }
 
+        
+
         function isWechat() {
             let ua = navigator.userAgent.toLowerCase(), flag = false;
             if(ua.indexOf("micromessenger") > -1){
@@ -158,6 +160,10 @@
                 $(".join_info").show();
             },1000);
         });
+        $(".group_error_butten").click(function(){
+            window.open("/");
+        });
+      
         //点击返回按钮
         $(".join_content_cancel").click(function(){
             $(".user_info").show();
@@ -211,8 +217,8 @@
             dataType: 'json',
             //url: "./json/user_info.json",
             //url: "./json/group_error.json",
-            //url: "./json/user_error.json",
-            url:"/v3/web/userinfo?i="+invite_code,
+            url: "./json/user_error.json",
+            //url:"/v3/web/userinfo?i="+invite_code,
             data: "",
             success: function(msg){
                 if(msg.status == 0){
