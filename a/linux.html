@@ -55,8 +55,10 @@
         <div id="content"></div>
         <script>
           let a = `
-## Debian based distros (Ubuntu, Mint, etc.)
+## Install on Ubuntu or other Debian based distros
 > sh -c "$(wget https://chative.com/d/linux/ubuntu_install.sh -O -)"
+## Uninstall
+> sudo rm /etc/apt/sources.list.d/chative.list && dpkg --purge chative
 `
           document.getElementById('content').innerHTML = marked.parse(a);
         </script>
