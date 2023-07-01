@@ -18,6 +18,9 @@ $(document).ready(function(){
       $(this).css({ "background": "#181A20","color":"#FFFFFF"});
       return false;
     });
+    $(".bnner-btn-right-desktop").click(function(){
+      $(this).css({ "background": "#181A20","color":"#FFFFFF"});
+    });
     $(".bnner-btn-left").mouseover(function () {
       $(this).css({ "opacity": "80%" });
     });
@@ -72,7 +75,18 @@ $(document).ready(function(){
       $(".qcode_android").css({"padding-bottom":"0"});
       $(".app_android_q").hide();
     });
-
+    $(".btn_linux_right").click(function(){
+      $("#copy_info").select();
+      document.execCommand("Copy");
+    });
+    $(".m1-chip").click(function(){
+      window.open("https://chative.com/d/chative-desktop-mac-arm64-latest.dmg");
+    });
+    $(".intel-chip").click(function(){
+      //window.open("https://chative.com/d/chative-desktop-mac-arm64-latest.dmg");
+      window.open("https://chative.com/d/chative-desktop-mac-x64-latest.dmg");
+    });
+ 
     // Detect OS version
     if (null != navigator.userAgent.match(/Intel Mac OS/)) {
         $(".mac_name").html("Intel");
