@@ -616,6 +616,7 @@ body{
     float: left;
     margin-top: 12px;
     resize:none;
+    overflow: hidden;
 }
 .btn_linux_right{
     width: 92px;
