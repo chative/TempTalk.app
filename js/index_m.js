@@ -40,7 +40,8 @@ $(document).ready(function(){
 
 
       if (null != navigator.userAgent.match(/Android/)) {
-        $(".bnner-btn-right").html("Download APK");
+        //$(".bnner-btn-right").html("Download APK");
+        $(".bnner-btn-right").html("Install");
         window.open("https://play.google.com/store/apps/details?id=org.difft.chative&pli=1");
       } else {
         window.open("https://apps.apple.com/us/app/chative-messenger/id6443719300");
@@ -54,7 +55,7 @@ $(document).ready(function(){
     // });
     // Detect OS version
     if (null != navigator.userAgent.match(/Android/)) {
-      $(".bnner-btn-right").html("Download APK");
+      $(".bnner-btn-right").html("Install");
         console.log(navigator.userAgent);
     } else {
       $(".bnner-btn-right").html("Install on App store");
