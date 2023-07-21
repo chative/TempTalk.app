@@ -5,13 +5,13 @@
             {
                 "appID": "373Q5YF6JG.org.difft.chative",
                 "paths": [
-                    "*"
+                    "/u/*"
                 ]
             },
             {
                 "appID": "YB5PG6M77Y.org.difft.chative",
                 "paths": [
-                    "*"
+                    "/u/*"
                 ]
             }
         ]
