@@ -42,7 +42,7 @@ $(document).ready(function(){
       if (null != navigator.userAgent.match(/Android/)) {
         //$(".bnner-btn-right").html("Download APK");
         $(".bnner-btn-right").html("Install");
-        window.open("https://play.google.com/store/apps/details?id=org.difft.chative&pli=1");
+        window.open("https://chative.com/d/chative-android-latest.apk");
       } else {
         window.open("https://apps.apple.com/us/app/chative-messenger/id6443719300");
       }
