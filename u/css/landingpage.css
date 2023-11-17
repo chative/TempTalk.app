@@ -35,7 +35,8 @@ body{
 }
 
 .navbar-default{
-    background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
+    /*background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;*/
+    background-color: #FFFFFF;
 }
 .container{
     margin: 0 auto;

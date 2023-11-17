@@ -32,7 +32,7 @@
 
 <div class="heaher">
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+        <div class="container" style="background: linear-gradient(0deg, rgba(77, 231, 220, 0.05) 0%, rgba(77, 231, 220, 0.05) 100%), #FFF;">
             <div class="navbar-header">
                 <button class="navbar-toggle" data-target="#navbar-menu" data-toggle="collapse" type="button">
                     <span class="icon-bar"></span>
@@ -41,11 +41,33 @@
                 </button>
                 <a class="navbar-brand" href="index_m.html"><img class="mr-1" src="images/logos.png"/></a>
             </div>
-            <div class="navbar-collapse collapse" id="navbar-menu">
+            <div class="navbar-collapse collapse" id="navbar-menu" style="max-height: 496px">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://github.com/chative/chative.com/wiki">Features</a></li>
-                    <li><a href="#">Docs</a></li>
+                    <li><a data-target="#product-menu" data-toggle="collapse">Products</a>
+                        <div class="navbar-collapse collapse" id="product-menu" style="max-height: 200px;border: none">
+                            <a href="#"><div class="product-menu-div1">
+                                <div style="display: inline-block">
+                                    <div class="product-menu-div1-font1">Chative</div>
+                                    <div class="product-menu-div1-font2">For everyone</div>
+                                </div>
+                                <div class="product-menu-arrow-icon"></div>
+                            </div>
+                            </a>
+                            <a href="https://ccapp.io/" target="_blank">
+                                <div class="product-menu-div2">
+                                    <div style="display: inline-block">
+                                        <div class="product-menu-div1-font1">cc messenger</div>
+                                        <div class="product-menu-div1-font2">For business</div>
+                                    </div>
+
+                                    <div class="product-menu-arrow-icon"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="https://github.com/chative" target="_blank">Docs</a></li>
                     <li><a href="aboutus_m.html">About Us</a></li>
+                    <li><a href="https://ccapp.io/" target="_blank">For Bussiness</a></li>
                 </ul>
             </div>
         </div>
@@ -78,17 +100,23 @@
         </div>
     </div>
 </div>
-<footer class="bs-docs-footer">
+<footer class="bs-docs-footer" style="margin-top: 0;">
     <div class="container">
-        <div class="col-lg-12" style="text-align: center;">
-            <a href="https://github.com/chative" target="_blank"><img class="footer_img_3" src="/images/footer3.png"/></a>
-            <a href="https://twitter.com/chativeapp" target="_blank"><img class="footer_img_2" src="images/mdi_twitter.png"/></a>
-            <a href="https://t.me/+USQkdc5C-QRmOTM1" target="_blank"><img class="footer_img_1" src="images/tabler_brand-telegram.png"/></a>
-            <!--<img class="footer_img_1" src="images/footer2.png"/>-->
+
+        <div class="col-lg-12" style="padding-left: 0px">
+            <a href="https://github.com/chative" target="_blank"><p class="content_bottom">Docs</p></a>
+            <a href="aboutus_m.html"><p class="content_bottom">About Us</p></a>
+            <a href="https://ccapp.io/" target="_blank"><p class="content_bottom">For Business(cc messenger)</p></a>
+            <p class="content_bottom" style="font-weight: 400">Need Help? Feel free to<a href="contactus_m.html" class="content_bottom"> Contacts Us</a></p>
         </div>
+        <div class="content_bottom_line"></div>
         <div class="col-lg-12 footer_p">
-            <p>For more help, email help#chative.com</p>
             <p>Chative © 2022-2023 , <a href="legal.html" style="color: #ffffff;">Terms & Privacy Policy</a></p>
+        </div>
+        <div class="col-lg-12" style="padding-left: 0px;margin-top: 24px">
+            <a href="https://github.com/chative" target="_blank"><img class="footer_img_3" src="/images/footer3.png"/></a>
+            <a href="https://twitter.com/chativeapp" target="_blank"><img class="footer_img_2" src="/images/mdi_twitter.png"/></a>
+            <a href="https://t.me/+USQkdc5C-QRmOTM1" target="_blank"><img class="footer_img_1" src="/images/index_m_bottom_icon.png"/></a>
         </div>
     </div>
 </footer>
