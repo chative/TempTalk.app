@@ -59,7 +59,7 @@
                             <div id="myDropdown" class="dropdown-content">
                                 <div class="header-left-div">
                                     <img class="header-img1-div" src="images/header-img1.png">
-                                    <a href="#"><img class="header-img1-bottom-div" src="images/header-img1-bottom.png"></a>
+                                    <a href="index.html"><img class="header-img1-bottom-div" src="images/header-img1-bottom.png"></a>
                                 </div>
                                 <div class="header-right-div1">
                                     <img class="header-img2-div" src="images/header-img2.png">
@@ -81,9 +81,9 @@
     </div>
     <div class="contactus-right-div">
         <p class="contactus-font1">Contact Us</p>
-        <p class="contactus-font2"><a class="contactus-a1">help#chative.com</a><div class="contactus-copy-icon"></div></p>
-        <p class="contactus-font3">You also can find us on <a style="text-underline: none;color: #056FFA" href="https://github.com/chative" target="_blank">Github</a>.</p>
-        <p class="contactus-font3">We'll get in touch with you as soon as possible.</p>
+        <p class="contactus-font2"><a href="mailto://help@chative.com" class="contactus-a1">help@chative.com</a><div class="contactus-copy-icon"></div></p>
+        <p class="contactus-font3">You can also open issue or discussion on our <a style="text-underline: none;color: #056FFA" href="https://github.com/chative" target="_blank">Github</a>.</p>
+<!--        <p class="contactus-font3">We'll get in touch with you as soon as possible.</p>-->
     </div>
 </div>
 <footer class="bs-docs-footer">
@@ -122,6 +122,13 @@
                 alert('复制失败')
             })
     })
+
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownMenu = document.querySelector('.dropdown-content');
+
+    dropdown.addEventListener('mouseover', () => { dropdownMenu.style.display = 'block'; });
+
+    dropdown.addEventListener('mouseout', () => { dropdownMenu.style.display = 'none'; });
 </script>
 </body>
 </html>

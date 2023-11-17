@@ -55,7 +55,7 @@
                 <ul class="nav navbar-nav navbar-right" style="position: absolute;right: 290px">
                     <li style="height: 72px;margin-right: -10px">
                     <div class="dropdown">
-                        <button onclick="showProducts()" class="dropbtn">Products
+                        <button class="dropbtn">Products
                             <img class="arrow-down" src="images/arrow-down.png">
                         </button>
                         <div id="myDropdown" class="dropdown-content">
@@ -210,9 +210,9 @@
     <div class="container">
         <div style="margin-left: 15px;margin-top: 24px">
             <p class="footer-font"><a href="https://github.com/chative" target="_blank" style="color: #ffffff;">Docs</a></p>
-            <p class="footer-font"><a href="aboutus.html" target="_blank" style="color: #ffffff;">About Us</a></p>
+            <p class="footer-font"><a href="aboutus.html" style="color: #ffffff;">About Us</a></p>
             <p class="footer-font"><a href="https://ccapp.io/" target="_blank" style="color: #ffffff;">For Business(cc messenger)</a></p>
-            <p class="footer-font" style="float: right;margin-right: 15px">Need Help? Feel free to <a href="contactus.html" target="_blank" style="color: #ffffff;font-weight: 500">Contact Us</a></p>
+            <p class="footer-font" style="float: right;margin-right: 15px">Need Help? Feel free to <a href="contactus.html"  style="color: #ffffff;font-weight: 500">Contact Us</a></p>
         </div>
         <div class="footer-line"></div>
         <div class="col-lg-6 footer_p">
@@ -228,23 +228,13 @@
 <script src="js/index.js?v=1.23" type="text/javascript"></script>
 <script src="js/common.js" type="module"></script>
 <script type="text/javascript">
-        function showProducts() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
 
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownMenu = document.querySelector('.dropdown-content');
 
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
+        dropdown.addEventListener('mouseover', () => { dropdownMenu.style.display = 'block'; });
+
+        dropdown.addEventListener('mouseout', () => { dropdownMenu.style.display = 'none'; });
 </script>
 </body>
 </html>

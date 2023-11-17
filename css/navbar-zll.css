@@ -676,6 +676,7 @@ body{
     background: #FFF;
 
     box-shadow: 0px 3px 6px 0px rgba(24, 26, 32, 0.08), 0px 7px 14px 0px rgba(71, 77, 87, 0.08), 0px 0px 1px 0px rgba(24, 26, 32, 0.10);
+
 }
 
 .dropdown-content a {
@@ -686,6 +687,12 @@ body{
 }
 
 .dropdown a:hover {background-color: #f1f1f1}
+
+
+
+.dropdown:hover .dropdown-content { display: block; }
+
+
 
 .show {display:block;}
 
@@ -795,7 +802,8 @@ body{
     line-height: 20px;
 }
 .contactus-a1{
-    color: #000;
+    color: #056FFA;
+    cursor: pointer;
 }
 .contactus-a1:hover{
     color: #056FFA;
