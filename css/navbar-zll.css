@@ -430,7 +430,7 @@ body{
 }
 .list-group-item{
     background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
