@@ -28,10 +28,10 @@
         }
     </script>
 </head>
-<body>
+<body style="background: linear-gradient(0deg, var(--bg2, #1E2329) 0%, var(--bg2, #1E2329) 100%), var(--twhite, #FFF);">
 <div class="heaher">
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container" style="background: linear-gradient(0deg, rgba(77, 231, 220, 0.05) 0%, rgba(77, 231, 220, 0.05) 100%), #FFF;">
+        <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle" data-target="#navbar-menu" data-toggle="collapse" type="button">
                     <span class="icon-bar"></span>
@@ -40,9 +40,14 @@
                 </button>
                 <a class="navbar-brand" href="index_m.html"><img class="mr-1" src="images/logos.png"/></a>
             </div>
-            <div class="navbar-collapse collapse" id="navbar-menu" style="max-height: 496px">
+            <div class="navbar-collapse collapse" id="navbar-menu" style="max-height: 496px;border: none">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-target="#product-menu" data-toggle="collapse">Products</a>
+                    <li><a data-target="#product-menu" data-toggle="collapse">
+                        <div>Products
+                            <img class="arrow_m-down" src="images/arrow_m-down.png">
+                        </div>
+
+                    </a>
                         <div class="navbar-collapse collapse" id="product-menu" style="max-height: 200px;border: none">
                             <a href="index_m.html"><div class="product-menu-div1">
                                 <div style="display: inline-block">
@@ -120,7 +125,7 @@
             <p class="content_m_font2">We believe secure apps should be transparent in how they work. Welcoming contributions and scrutiny from the community to continually enhance security and performance: https://github.com/chative.</p>
         </div>
     </div>
-    <div class="row con_end" style="background: #ffffff;padding-bottom: 193px;">
+    <div class="row con_end" style="padding-bottom: 193px;">
         <div class="con_end_p">
             There are many other<br> unique features of <br>Chative,<br> but if you read this far, why don’t you try it
             for yourself.

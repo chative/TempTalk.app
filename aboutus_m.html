@@ -28,11 +28,11 @@
         }
     </script>
 </head>
-<body>
+<body style="background: linear-gradient(0deg, var(--bg2, #1E2329) 0%, var(--bg2, #1E2329) 100%), var(--twhite, #FFF);">
 
 <div class="heaher">
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container" style="background: linear-gradient(0deg, rgba(77, 231, 220, 0.05) 0%, rgba(77, 231, 220, 0.05) 100%), #FFF;">
+        <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle" data-target="#navbar-menu" data-toggle="collapse" type="button">
                     <span class="icon-bar"></span>
@@ -43,7 +43,11 @@
             </div>
             <div class="navbar-collapse collapse" id="navbar-menu" style="max-height: 496px">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-target="#product-menu" data-toggle="collapse">Products</a>
+                    <li><a data-target="#product-menu" data-toggle="collapse">
+                        <div>Products
+                            <img class="arrow_m-down" src="images/arrow_m-down.png">
+                        </div>
+                    </a>
                         <div class="navbar-collapse collapse" id="product-menu" style="max-height: 200px;border: none">
                             <a href="index_m.html"><div class="product-menu-div1">
                                 <div style="display: inline-block">

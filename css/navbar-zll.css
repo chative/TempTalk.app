@@ -60,7 +60,7 @@ body{
     display: flex;
     align-items: center;
 
-    color: #001C4E;
+    color: var(--tprimary, #EAECEF);
 }
 .p2{
     margin-top: 30px;
@@ -71,7 +71,7 @@ body{
     line-height: 24px;
     display: flex;
     align-items: center;
-    color: #181A20;
+    color: var(--tprimary, #EAECEF);
 }
 .bnner_btn{
     margin-top: 40px;
@@ -102,7 +102,7 @@ body{
 }
 .btn{
     border: 0px;
-    border-right: 1px solid #ccc;
+    /*border-right: 1px solid #ccc;*/
     /* border-color: #ccc; */
     /* border: 1px solid #ccc; */
 }
@@ -136,7 +136,7 @@ body{
     
 } */
 .bnner_btn button{
-    background: #181A20;
+    background: var(--line, #474D57);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 510;
@@ -158,6 +158,7 @@ body{
 .app_android{
     width: 143px;
     height: auto;
+    border-radius: 8px;
 }
 .app_android_q{
     width: 133px;
@@ -166,7 +167,7 @@ body{
     display: none;
 }
 .qcode{
-    background-color: #000000;
+    background: var(--line, #474D57);
     border-radius: 8px;
     margin-left: 15px;
     width: 133px;
@@ -177,7 +178,7 @@ body{
     /* padding-bottom: 10px; */
 }
 .qcode_android{
-    background-color: #000000;
+    background: var(--line, #474D57);
     border-radius: 8px;
     margin-left: 15px;
     width: 143px;
@@ -204,7 +205,8 @@ body{
 }
 
 .navbar-default{
-    background-color: #FFFFFF;
+    /*background-color: #FFFFFF;*/
+    background: var(--bgspace, #000);
     border: 0px;
     margin-top: 0px;
     height: 72px;
@@ -222,10 +224,10 @@ body{
 .navbar-default .navbar-nav>li>a {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
-    font-weight: 550;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #000000;
+    color: var(--tprimary, #EAECEF);
     padding: 24px 15px;
 }
 .navbar-default .navbar-nav>li>a:hover{
@@ -234,7 +236,8 @@ body{
     font-weight: 550;
     font-size: 16px;
     line-height: 24px;
-    color: rgba(8, 2, 2, 0.781);
+    color: var(--tprimary, #EAECEF);
+    /*color: rgba(8, 2, 2, 0.781);*/
     /* border-bottom: 1px solid #000000; */
 }
 .navbar-default .navbar-toggle .icon-bar {
@@ -343,20 +346,20 @@ body{
 .con_end_p{
     /* width: 785px; */
     margin: 0px auto;
-    margin-top: 128px;
+    margin-top: 110px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 510;
     font-size: 28px;
     line-height: 36px;
     align-items: center;
     text-align: center;
-    color: #000000;
+    color: var(--tprimary, #EAECEF);
 }
 .bs-docs-footer{
     padding-top: 32px;
     padding-bottom: 50px;
-    margin-top: 100px;
+    margin-top: 190px;
     margin-bottom: 0px;
     height: 208px;
     color: #99979c;
@@ -417,7 +420,7 @@ body{
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    color: #000000;
+    color: var(--tprimary, #EAECEF);
 }
 .article_list{
     margin-left: 25px;
@@ -457,7 +460,7 @@ body{
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    color: #181A20;
+    color: var(--tprimary, #EAECEF);
 }
 .article_content{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -467,7 +470,7 @@ body{
     line-height: 24px;
     padding-right: 16px;
     height: auto;
-    color: #181A20;
+    color: var(--tprimary, #EAECEF);
 }
 .add_date{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -475,7 +478,7 @@ body{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-
+    color: var(--tprimary, #EAECEF);
 }
 .article_content>.content{
     margin-top: 32px;
@@ -647,12 +650,14 @@ body{
 
 .dropbtn {
     /*background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;*/
-    background-color: #FFFFFF;
+    /*background-color: #FFFFFF;*/
+    background: var(--bgspace, #000);
     padding: 24px;
     font-size: 16px;
     font-weight: 550;
     border: none;
     cursor: pointer;
+    color: var(--tprimary, #EAECEF);
 }
 
 /*.dropbtn:hover, .dropbtn:focus {*/
@@ -673,7 +678,7 @@ body{
     width: 464px;
     margin-left: -170px;
     border-radius: 8px;
-    background: #FFF;
+    background: var(--bgspace, #000);
 
     box-shadow: 0px 3px 6px 0px rgba(24, 26, 32, 0.08), 0px 7px 14px 0px rgba(71, 77, 87, 0.08), 0px 0px 1px 0px rgba(24, 26, 32, 0.10);
 
@@ -686,7 +691,7 @@ body{
     border-radius: 0 0 8px 8px;
 }
 
-.dropdown a:hover {background-color: #f1f1f1}
+.dropdown a:hover {background-color: #2B3139}
 
 
 
@@ -719,15 +724,15 @@ body{
     display: inline-block;
 }
 .content_font1{
-    color: #001C4E;
+    color: var(--tprimary, #EAECEF);
     font-size: 32px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 510;
     line-height: 40px;
     margin-bottom: 24px;
 }
 .content_font2{
-    color: #001C4E;
+    color: var(--tprimary, #EAECEF);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -765,7 +770,7 @@ body{
     text-align: center;
 }
 .contactus-font1{
-    color: #001C4E;
+    color: var(--tprimary, #EAECEF);
     text-align: center;
     font-size: 40px;
     font-style: normal;
@@ -773,7 +778,7 @@ body{
     line-height: normal;
 }
 .contactus-font2{
-    color: #000;
+    color: var(--tprimary, #EAECEF);
     text-align: center;
     font-size: 20px;
     font-style: normal;
@@ -787,14 +792,14 @@ body{
     margin-left: 10px;
     -webkit-mask: url('/images/tabler_copy.svg') no-repeat center;
     -webkit-mask-size: 100%;
-    background-color: #474D57;
+    background-color: #B7BDC6;
     cursor: pointer;
     position: absolute;
     margin-top: 4px;
     display: inline-block;
 }
 .contactus-font3{
-    color: #001C4E;
+    color: var(--tprimary, #EAECEF);
     text-align: center;
     font-size: 14px;
     font-style: normal;
@@ -826,7 +831,7 @@ body{
     height: 232px;
     width: 214px;
     margin: 12px 0 12px 12px;
-    border: 1px solid #EAECEF;
+    border: 1px solid var(--line, #474D57);
     border-radius: 8px;
     display: inline-block;
 }
@@ -842,7 +847,7 @@ body{
     height: 232px;
     width: 214px;
     margin: 12px 12px 12px 0px;
-    border: 1px solid #EAECEF;
+    border: 1px solid var(--line, #474D57);
     border-radius: 8px;
     display: inline-block;
     float: right;
