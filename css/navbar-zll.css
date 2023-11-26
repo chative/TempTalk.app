@@ -429,10 +429,11 @@ body{
 }
 .list-group{
     width: 200px;
-    background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
+    /*background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;*/
 }
 .list-group-item{
-    background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
+    background: #1E2329;
+    /*background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;*/
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -453,7 +454,9 @@ body{
 .article_active{
     color: #056FFA;
 }
-
+.article_active:hover{
+    color: #056FFA;
+}
 .detail_title{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
