@@ -87,7 +87,7 @@ body{
     margin: 0px auto;
     margin-top: 40px;
     border-radius: 50%;
-    border: 1px solid #EAECEF;
+    /*border: 1px solid #EAECEF;*/
 }
 .send_message{
     margin-top: 20px;
