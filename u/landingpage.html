@@ -10,7 +10,7 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
     <link href="css/landingpage.css" rel="stylesheet">
-    <link rel="icon" href="../images/logo_new.png" type="image/x-icon"/>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 <div class="heaher">
@@ -163,7 +163,10 @@
         });
 
         appurl = "chative://invite/?" + params;
-        window.location.replace(appurl);
+        //icon 不显示，设置一下延时
+        setTimeout(()=>{
+            window.location.replace(appurl);
+        },100)
     });
     
     
