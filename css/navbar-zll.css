@@ -770,24 +770,29 @@ body{
 .contactus-right-div{
     margin-left: 200px;
     display: inline-block;
-    text-align: center;
+    text-align: left;
+    margin-top: 100px;
+    position: absolute;
 }
 .contactus-font1{
     color: var(--tprimary, #EAECEF);
-    text-align: center;
+    text-align: left;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 24px;
+    margin-bottom: 24px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .contactus-font2{
     color: var(--tprimary, #EAECEF);
-    text-align: center;
-    font-size: 20px;
+    text-align: left;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 24px;
     display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .contactus-copy-icon{
     height: 20px;
@@ -803,18 +808,20 @@ body{
 }
 .contactus-font3{
     color: var(--tprimary, #EAECEF);
-    text-align: center;
-    font-size: 14px;
+    text-align: left;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .contactus-a1{
-    color: #056FFA;
+    color: #82C1FC;
     cursor: pointer;
 }
 .contactus-a1:hover{
-    color: #056FFA;
+    color: #82C1FC;
 }
 .contactus-copy-icon:hover{
     -webkit-mask: url('/images/tabler_copy-hover.svg') no-repeat center;

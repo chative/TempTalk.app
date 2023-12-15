@@ -558,9 +558,12 @@ body{
     height: 1px;
     background: #474D57;
 }
+.contactus_m_div{
+    margin-left: 15px;
+}
 .contactus_m-font1{
     color: var(--tprimary, #EAECEF);
-    text-align: center;
+    text-align: left;
     font-size: 40px;
     font-style: normal;
     font-weight: 510;
@@ -568,11 +571,12 @@ body{
 }
 .contactus_m-font2{
     color: var(--tprimary, #EAECEF);
-    text-align: center;
-    font-size: 20px;
+    text-align: left;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 24px;
+    margin-bottom: 16px;
 }
 .contactus_m-copy-icon{
     height: 20px;
@@ -588,16 +592,16 @@ body{
 }
 .contactus_m-font3{
     color: var(--tprimary, #EAECEF);
-    text-align: center;
-    font-size: 14px;
+    text-align: left;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
 }
 .contactus_m-a1{
-    color: #056FFA;
+    color: #82C1FC;
     cursor: pointer;
-    margin-left: -20px;
 }
 .contactus_m-a1:hover{
     color: #056FFA;
