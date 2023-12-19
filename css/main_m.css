@@ -45,7 +45,7 @@ body{
     width: 114px;
     height: auto;
     float: left;
-    margin-top: 1px
+    /*margin-top: 1px*/
 }
 .navbar-brand{
     width: 200px;
@@ -207,7 +207,7 @@ body{
     font-size: 22.4262px;
     line-height: 17px;
     color: #1E2329;
-    padding-top: 24px;
+    padding-top: 15px;
 }
  
 .navbar-default .navbar-nav>li>a {
@@ -251,6 +251,7 @@ body{
 .navbar-toggle{
     margin-top:15px;
     border: 0px;
+    padding-top: 2px;
 }
 .card_list{
     margin-top: 48px;

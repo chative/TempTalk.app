@@ -765,15 +765,21 @@ body{
     display: inline-block;
     width: 479px;
     height: 479px;
-    margin-left: 70px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 31%;
 }
 .contactus-right-div{
-    margin-left: 200px;
     display: inline-block;
     text-align: left;
-    margin-top: 100px;
     position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 300px;
 }
+
 .contactus-font1{
     color: var(--tprimary, #EAECEF);
     text-align: left;
