@@ -97,7 +97,9 @@
             }
         }
 
-        
+        function isMac(){
+            return /Mac OS X /.test(window.navigator.userAgent);
+        }
 
         function isWechat() {
             let ua = navigator.userAgent.toLowerCase(), flag = false;
@@ -240,7 +242,13 @@
         if (isWechat()) {
             showWechatGuide();
         }
+
         appurl = "chative://invite/?" + params;
+
+        if(isMac()) {
+            appurl = "chative://localaction/invite?" + params;
+        }
+
         //icon 不显示，设置一下延时
         setTimeout(()=>{
             window.location.replace(appurl);
