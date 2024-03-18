@@ -1,5 +1,5 @@
 .hearder-name{
-    font-family: 'Outfit';
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22.4262px;
@@ -7,7 +7,7 @@
     color: #1E2329;
 }
 .nav_list li a{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 16px;

@@ -3,6 +3,7 @@ body{
     background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
     /* min-height: 100%; */
     /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  */
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 .navbar-default .navbar-toggle:hover{
     /*background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;*/
@@ -12,7 +13,7 @@ body{
     background:  #474D57;
 }
 .hearder-name{
-    font-family: 'Outfit';
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22.4262px;
@@ -20,7 +21,7 @@ body{
     color: #1E2329;
 }
 .nav_list li a{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -112,7 +113,7 @@ body{
     height: 40px;
     background: #181A20;
     border-radius: 8px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -147,7 +148,7 @@ body{
 } */
 .bnner_btn button{
     background: var(--line, #474D57);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 14px;
@@ -185,7 +186,7 @@ body{
 }
 .bnner_btn button:hover{
     background: #181A20;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 14px;
@@ -201,7 +202,7 @@ body{
    
 }
 .navbar-default .navbar-brand{
-    font-family: 'Outfit';
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22.4262px;
@@ -211,7 +212,7 @@ body{
 }
  
 .navbar-default .navbar-nav>li>a {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -220,7 +221,7 @@ body{
     padding: 24px 15px;
 }
 .navbar-default .navbar-nav>li>a:hover{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -316,7 +317,7 @@ body{
     height: auto;
 }
 .card_p1{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -330,7 +331,7 @@ body{
     align-items: flex-end;
 }
 .card_p2{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -349,7 +350,7 @@ body{
     width: 343px;
     margin: 0px auto;
     margin-top: 128px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -369,7 +370,7 @@ body{
 }
 .footer_p{
     margin-top: 24px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     /*text-align: center;*/
@@ -404,7 +405,7 @@ body{
 
 /* 内容页 */
 .list_title{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -423,7 +424,7 @@ body{
 }
 .list-group-item{
     background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -447,7 +448,7 @@ body{
 }
 
 .detail_title{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -455,7 +456,7 @@ body{
     color: var(--tprimary, #EAECEF);
 }
 .article_content{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -465,7 +466,7 @@ body{
     color: var(--tprimary, #EAECEF);
 }
 .add_date{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -473,7 +474,7 @@ body{
     color: var(--tprimary, #EAECEF);
 }
 .dh_title > a{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -513,7 +514,7 @@ body{
     float: right;
     margin-top: 0px;
     padding-top: 0px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-size: 20px;
     line-height: 26px;
@@ -636,7 +637,7 @@ body{
 }
 .product-menu-div1-font1{
     color: var(--tprimary, #EAECEF);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 510;
@@ -646,7 +647,7 @@ body{
 }
 .product-menu-div1-font2{
     color: var(--tsecondary, #B7BDC6);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
