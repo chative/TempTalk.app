@@ -9,6 +9,7 @@
     <script src="../js/jquery.js" type="text/javascript"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../js/common.js" type="text/javascript"></script>
     <link href="css/landingpage.css?id=68" rel="stylesheet">
 <!--    <link rel="icon" href="../images/logo_new.png" type="image/x-icon"/>-->
     <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
@@ -238,21 +239,21 @@
             data: "",
             success: function(msg){
                 if(msg.status == 0){
-                    $(".user_name").html(msg.data.groupName);
-                    $("#user_invites").html(msg.data.inviterName+" invites you to join the group");
+                    $(".user_name").html(htmlEscape(msg.data.groupName));
+                    $("#user_invites").html(htmlEscape(msg.data.inviterName)+" invites you to join the group");
                     //alert(msg.data.avatarContent);
                     if(msg.data.avatarContent != "" && msg.data.avatarContent){
-                        $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                        $(".user_pic").attr("src","data:image/png;base64,"+base64Escape(msg.data.avatarContent));
                     }
                 }else{
-                    $(".user_name").html(msg.data.groupName);
-                    $("#user_invites").html(msg.data.inviterName+" invites you to join the group");
+                    $(".user_name").html(htmlEscape(msg.data.groupName));
+                    $("#user_invites").html(htmlEscape(msg.data.inviterName)+" invites you to join the group");
                     if(msg.data.avatarContent != "" && msg.data.avatarContent){
-                        $(".user_pic").attr("src","data:image/png;base64,"+msg.data.avatarContent);
+                        $(".user_pic").attr("src","data:image/png;base64,"+base64Escape(msg.data.avatarContent));
                     }
                     $("#group_error").show();
                     $(".user_info").hide();
-                    $("#group_error_content").html(msg.reason);
+                    $("#group_error_content").html(htmlEscape(msg.reason));
                     //alert("用户信息请求失败");
                 }
                 console.log(msg);
