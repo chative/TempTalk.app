@@ -80,7 +80,7 @@
             <div class="article_content">
                 <p class="detail_title">Chatvie Client Hashes</p>
                 <p class="add_date">
-                    Last updated : January 31, 2024
+                    Last updated : April 22, 2024
                 </p>
                 <br>
                 <div id="content"></div>
@@ -90,21 +90,17 @@ let a = `
 
 #### Android
 
-> chative-android-latest.apk
-> chative-android-latest-sha256tag
+> chative-android-latest.apksplited1cb05c6cf583e9fed10afc760f847ad49b4ed2b00a59d75224837cda821bf349
 
 #### macOS
 
-> chative-desktop-mac-x64-latest.dmg
-> chative-desktop-mac-x64-latest-sha256tag
+> chative-desktop-mac-x64-latest.dmgsplited5d497df99a8737f5d57e048ac976ac5402904f64d114ea0bb875206312672bc4
 
-> chative-desktop-mac-arm64-latest.dmg
-> chative-desktop-mac-arm64-latest-sha256tag
+> chative-desktop-mac-arm64-latest.dmgsplited8eb6296a3fdd30b1abd4f2e85369057cfd130978e273ef0ef6760191ee78890a
 
 #### Linux
 
-> chative-linux-amd64-latest.deb
-> chative-linux-amd64-deb-latest-sha256tag
+> chative-linux-amd64-latest.debsplited84858080fef0747734bdc8cbf246cb59a055fcc37a56fe6fa70be8874349be13
 
 <br>
 
@@ -122,6 +118,11 @@ let a = `
 
 > sha256sum &lt;FILE&gt;
 `
+// 注释：将hashtag换行
+a = a.replace(/chative-android-latest\.apksplited/, 'chative-android-latest.apk\n> ');
+a = a.replace(/chative-desktop-mac-x64-latest.\.dmgsplited/, 'chative-desktop-mac-x64-latest.dmg\n> ');
+a = a.replace(/chative-desktop-mac-arm64-latest.\.dmgsplited/, 'chative-desktop-mac-arm64-latest.dmg\n> ');
+a = a.replace(/chative-linux-amd64-latest.\.debsplited/, 'chative-linux-amd64-latest.deb\n> ');
 document.getElementById('content').innerHTML = marked.parse(a);
 </script>
             </div>
