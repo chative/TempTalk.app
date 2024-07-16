@@ -15,5 +15,10 @@
                 ]
             }
         ]
-    }
+    },
+    "webcredentials": {
+        "apps": [
+            "YB5PG6M77Y.org.difft.chative"
+        ]
+    },
 }
