@@ -3,7 +3,7 @@
 odir=`pwd`;
 ls "${odir}"
 
-androidapk="chative-android-latest.apk"
+androidapk="TempTalk-android-latest.apk"
 macx64="chative-desktop-mac-x64-latest.dmg"
 macarm64="chative-desktop-mac-arm64-latest.dmg"
 linuxdeb64="chative-linux-amd64-latest.deb"
@@ -15,7 +15,7 @@ function loginfo(){
 }
 
 function download_file(){
-    wget https://d.chative.com/d/chative-android-latest.apk
+    wget https://d.chative.com/d/TempTalk-android-latest.apk
     wget https://d.chative.com/d/chative-desktop-mac-x64-latest.dmg
     wget https://d.chative.com/d/chative-desktop-mac-arm64-latest.dmg
     wget https://d.chative.com/d/linux/chative-linux-amd64-latest.deb
@@ -25,7 +25,7 @@ function check_file(){
     if [[ -f "${androidapk}" ]]; then
         androidapksha=`shasum -a 256 ${androidapk}|cut -d ' ' -f1`
         printf "check ${androidapk} sha256sum ${androidapksha}"
-        sed -i "" "s/chative-android-latest.apksplited.*/chative-android-latest.apksplited${androidapksha}/g" ${odir}/a/hashes.html
+        sed -i "" "s/TempTalk-android-latest.apksplited.*/TempTalk-android-latest.apksplited${androidapksha}/g" ${odir}/a/hashes.html
         rm -rf ${androidapk}
     else
         loginfo "check ${odir}/${androidapk} fail"
