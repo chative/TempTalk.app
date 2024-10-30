@@ -8,10 +8,8 @@ $(document).ready(function(){
     $(".bnner-btn-right").click(function () {
       var info = $(".mac_name").html();
       if( info == "Intel"){
-        //window.open("https://file-1307206075.file.myqcloud.com/chative/chative-desktop-mac-x64-latest.dmg");
         window.open("https://d.chative.com/d/chative-desktop-mac-x64-latest.dmg");
       }else{
-        //window.open("https://file-1307206075.file.myqcloud.com/chative/chative-desktop-mac-arm64-latest.dmg");
         window.open("https://d.chative.com/d/chative-desktop-mac-arm64-latest.dmg");
       }
    
@@ -83,7 +81,6 @@ $(document).ready(function(){
       window.open("https://d.chative.com/d/chative-desktop-mac-arm64-latest.dmg");
     });
     $(".intel-chip").click(function(){
-      //window.open("https://d.chative.com/d/chative-desktop-mac-arm64-latest.dmg");
       window.open("https://d.chative.com/d/chative-desktop-mac-x64-latest.dmg");
     });
  

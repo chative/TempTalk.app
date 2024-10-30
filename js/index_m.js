@@ -44,7 +44,7 @@ $(document).ready(function(){
         $(".bnner-btn-right").html("Install");
         window.open("https://d.chative.com/d/TempTalk-android-latest.apk");
       } else {
-        window.open("https://apps.apple.com/us/app/chative-messenger/id6443719300");
+        window.open("https://apps.apple.com/us/app/temptalk/id6443719300");
       }
      
       return false;

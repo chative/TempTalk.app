@@ -9,6 +9,6 @@ sudo echo "deb [signed-by=/etc/apt/keyrings/chative-pubkey.gpg arch=$( dpkg --pr
 rm ~/chative-pubkey.gpg
 
 
-# Install chative
+# InstallTempTalk
 sudo apt update
 sudo apt install chative
