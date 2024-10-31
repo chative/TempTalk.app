@@ -1,10 +1,15 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url("/family/SF-Pro.ttf") format('truetype');;
+    font-style: normal;
+}
 body{
     padding-top: 70px;
     background: #1E2329;
     /*background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;*/
     /* min-height: 100%; */
     /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  */
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: 'SF Pro',Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 .navbar-default .navbar-toggle:hover{
     background: linear-gradient(0deg, rgba(77, 231, 220, 0.05), rgba(77, 231, 220, 0.05)), #FFFFFF;
@@ -66,7 +71,6 @@ body{
     margin-top: 10px;
 }
 .user_name{
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 590;
     font-size: 24px;
@@ -74,7 +78,6 @@ body{
     color: #EAECEF;
 }
 .user_add_friend{
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -118,7 +121,6 @@ body{
     padding: 20px;
 }
 .join_title {
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 16px;
@@ -126,7 +128,6 @@ body{
     color: #EAECEF;
 }
 .join_content{
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -146,7 +147,6 @@ body{
     border-right: 1px solid #474D57;
     /* SF/H6 */
 
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 14px;
@@ -176,7 +176,6 @@ body{
     height: 43px;
     /* SF/H6 */
 
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 14px;
@@ -189,7 +188,6 @@ body{
     /* background: yellow; */
     height: 43px;
     float: right;
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 510;
     font-size: 14px;
@@ -205,7 +203,6 @@ body{
     background-color: #000;
 }
 .bs-docs-footer a {
-    font-family: SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
