@@ -4,8 +4,8 @@ odir=`pwd`;
 ls "${odir}"
 
 androidapk="TempTalk-android-latest.apk"
-macx64="chative-desktop-mac-x64-latest.dmg"
-macarm64="chative-desktop-mac-arm64-latest.dmg"
+macx64="temptalk-desktop-mac-x64-latest.dmg"
+macarm64="temptalk-desktop-mac-arm64-latest.dmg"
 linuxdeb64="chative-linux-amd64-latest.deb"
 MYLOG="logs_`date +%F`.log"
 
@@ -16,8 +16,8 @@ function loginfo(){
 
 function download_file(){
     wget https://d.chative.com/d/TempTalk-android-latest.apk
-    wget https://d.chative.com/d/chative-desktop-mac-x64-latest.dmg
-    wget https://d.chative.com/d/chative-desktop-mac-arm64-latest.dmg
+    wget https://d.chative.com/d/temptalk-desktop-mac-x64-latest.dmg
+    wget https://d.chative.com/d/temptalk-desktop-mac-arm64-latest.dmg
     wget https://d.chative.com/d/linux/chative-linux-amd64-latest.deb
 }
 
@@ -35,7 +35,7 @@ function check_file(){
     if [[ -f "${macx64}" ]]; then
         macx64sha=`shasum -a 256 ${macx64}|cut -d ' ' -f1`
         printf "check ${macx64} sha256sum ${macx64sha}"
-        sed -i "" "s/chative-desktop-mac-x64-latest.dmgsplited.*/chative-desktop-mac-x64-latest.dmgsplited${macx64sha}/g" ${odir}/a/hashes.html
+        sed -i "" "s/temptalk-desktop-mac-x64-latest.dmgsplited.*/temptalk-desktop-mac-x64-latest.dmgsplited${macx64sha}/g" ${odir}/a/hashes.html
         rm -rf ${macx64}
     else
         loginfo "check ${macx64} fail"
@@ -45,7 +45,7 @@ function check_file(){
     if [[ -f "${macarm64}" ]]; then
         macarm64sha=`shasum -a 256 ${macarm64}|cut -d ' ' -f1`
         printf "check ${macarm64} sha256sum ${macarm64sha}"
-        sed -i "" "s/chative-desktop-mac-arm64-latest.dmgsplited.*/chative-desktop-mac-arm64-latest.dmgsplited${macarm64sha}/g" ${odir}/a/hashes.html
+        sed -i "" "s/temptalk-desktop-mac-arm64-latest.dmgsplited.*/temptalk-desktop-mac-arm64-latest.dmgsplited${macarm64sha}/g" ${odir}/a/hashes.html
         rm -rf ${macarm64}
     else
         loginfo "check ${macarm64} fail"
