@@ -15,10 +15,10 @@ function loginfo(){
 }
 
 function download_file(){
-    wget https://d.chative.com/d/TempTalk-android-latest.apk
-    wget https://d.chative.com/d/temptalk-desktop-mac-x64-latest.dmg
-    wget https://d.chative.com/d/temptalk-desktop-mac-arm64-latest.dmg
-    wget https://d.chative.com/d/linux/chative-linux-amd64-latest.deb
+    wget https://d.temptalk.app/d/TempTalk-android-latest.apk
+    wget https://d.temptalk.app/d/temptalk-desktop-mac-x64-latest.dmg
+    wget https://d.temptalk.app/d/temptalk-desktop-mac-arm64-latest.dmg
+    wget https://d.temptalk.app/d/linux/chative-linux-amd64-latest.deb
 }
 
 function check_file(){

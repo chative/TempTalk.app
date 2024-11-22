@@ -42,7 +42,7 @@ $(document).ready(function(){
       if (null != navigator.userAgent.match(/Android/)) {
         //$(".bnner-btn-right").html("Download APK");
         $(".bnner-btn-right").html("Install");
-        window.open("https://d.chative.com/d/TempTalk-android-latest.apk");
+        window.open("https://d.temptalk.app/d/TempTalk-android-latest.apk");
       } else {
         window.open("https://apps.apple.com/us/app/temptalk/id6443719300");
       }

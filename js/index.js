@@ -8,9 +8,9 @@ $(document).ready(function(){
     $(".bnner-btn-right").click(function () {
       var info = $(".mac_name").html();
       if( info == "Intel"){
-        window.open("https://d.chative.com/d/temptalk-desktop-mac-x64-latest.dmg");
+        window.open("https://d.temptalk.app/d/temptalk-desktop-mac-x64-latest.dmg");
       }else{
-        window.open("https://d.chative.com/d/temptalk-desktop-mac-arm64-latest.dmg");
+        window.open("https://d.temptalk.app/d/temptalk-desktop-mac-arm64-latest.dmg");
       }
    
       $(this).css({ "background": "#181A20","color":"#FFFFFF"});
@@ -78,10 +78,10 @@ $(document).ready(function(){
       document.execCommand("Copy");
     });
     $(".m1-chip").click(function(){
-      window.open("https://d.chative.com/d/temptalk-desktop-mac-arm64-latest.dmg");
+      window.open("https://d.temptalk.app/d/temptalk-desktop-mac-arm64-latest.dmg");
     });
     $(".intel-chip").click(function(){
-      window.open("https://d.chative.com/d/temptalk-desktop-mac-x64-latest.dmg");
+      window.open("https://d.temptalk.app/d/temptalk-desktop-mac-x64-latest.dmg");
     });
  
     // Detect OS version

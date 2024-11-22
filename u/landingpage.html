@@ -115,9 +115,9 @@
             $(".user-content").show();
             $(".user-content_index").hide();
             $(".bs-docs-footer").show();
-            $(".download").attr("href","https://d.chative.com/d/TempTalk-android-latest.apk");
+            $(".download").attr("href","https://d.temptalk.app/d/TempTalk-android-latest.apk");
             $(".join_content_Download").click(function(){
-                window.open("https://d.chative.com/d/TempTalk-android-latest.apk");
+                window.open("https://d.temptalk.app/d/TempTalk-android-latest.apk");
             });
         }else{
             $(".user-content").hide();
@@ -127,7 +127,7 @@
 
         new QRCode(document.getElementById('qrcode'),{
             render:'canvas',
-            text: "https://chative.com/u/index.html?" + params,
+            text: "https://temptalk.app/u/index.html?" + params,
             correctLevel: QRCode.CorrectLevel.H,
             width:240,
             height:240,
