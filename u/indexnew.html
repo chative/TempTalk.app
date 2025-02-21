@@ -1,0 +1,265 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>TempTalk</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900"> -->
+    <script type="text/javascript" src="../js/qrcode.js"></script>
+    <script src="../js/jquery.js" type="text/javascript"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../js/common.js" type="text/javascript"></script>
+<!--    <link rel="icon" href="../images/logo_new.png" type="image/x-icon"/>-->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+    <link href="./u/css/landingpage.css?id=68" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <nav class="navbar navbar-default navbar-fixed-top" style="border: 0px;background: #000;">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html"><img class="mr-1" src="../images/logo2.png"/></a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container-fluid" style="padding: 50px 15px;text-align: center;">
+    <!-- 安卓ios class = user-content, mac,win class 为user-content_index -->
+    <div class="user-content" style="">
+        <img class="user_pic" src="./u/images/user_pic.png">
+        <!-- 有安装APP -->
+        <div class="user_info" style="">
+            <p class="user_name">&nbsp;</p>
+            <p class="user_add_friend">Add friend on TempTalk</p>
+            <button class="btn send_message">Send Message</button>
+        </div>
+        <!-- 没安装APP -->
+        <div class="join_info" style="display: none;">
+            <div class="join_content_top">
+                <p class="join_title">Join first</p>
+                <p class="join_content">If nothing happens, please download TempTalk app first.</p>
+            </div>
+            <div class="join_content_buttom">
+                <div class="join_content_cancel">Cancel</div>
+                <div class="join_content_Download">Download</div>
+            </div>
+        </div>
+        <div  id="group_error" style="display: none;">
+            <div class="join_content_top">
+                <p class="join_title">Error</p>
+                <p class="join_content" id="group_error_content"></p>
+            </div>
+            <div class="join_content_buttom" style="line-height: 43px;">
+                <div class="group_error_butten">OK</div>
+            </div>
+        </div>
+    </div>   
+    <!-- 网页 -->
+    <div class="user-content_index" style="">
+        <img class="user_pic" src="./u/images/user_pic.png">
+        <div class="user_info">
+            <p class="user_name">...</p>
+            <!-- <img id="qrcode" src="images/qrcode.png" style="width: 240px;height: 240px;"> -->
+            <div id="qrcode" class="qrcode-div">
+<!--                <img src="icon.svg" id="logo" style="display: none">-->
+            </div>
+            <p class="user_add_friend">Please Scan with your phone</p>
+        </div>
+
+        <div  id="user_error" style="display: none;">
+            <div class="join_content_top">
+                <p class="join_title">Error</p>
+                <p class="join_content" id="user_error_content"></p>
+            </div>
+            <div class="join_content_buttom" style="line-height: 43px;">
+                <div class="group_error_butten">OK</div>
+            </div>
+        </div>
+    </div>  
+</div>
+<footer class="bs-docs-footer navbar-fixed-bottom" style="bottom: 0px;">
+    <div class="container" style="text-align: center;">
+       <a class="download" href=""><img style="width: 20px;height: auto;margin-top: -3px;" src="./images/logo_new.png" > &nbsp;Download App <img style="width: 12px;height: auto;" src="./u/images/arrow.png" ></a>
+    </div>
+</footer>
+<!-- <script src="../js/index_m.js" type="text/javascript"></script> -->
+<!-- <script src="../js/common.js" type="module"></script> -->
+<script type="text/javascript">
+    //url : 
+    $(function(){
+        function isIosOrAndroid(){
+            let ua = navigator.userAgent;
+            if (/(Android)/i.test(ua)){
+                return 'Android';
+            }
+            if (/(iPhone|iPad|ipod|iOS)/i.test(ua)){
+                return 'Ios';
+            }
+        }
+
+        function isMac(){
+            return /Mac OS X /.test(window.navigator.userAgent);
+        }
+
+        function isWechat() {
+            let ua = navigator.userAgent.toLowerCase(), flag = false;
+            if(ua.indexOf("micromessenger") > -1){
+                flag = true;
+            }else {
+                flag = false;
+            }
+            return flag;
+        }
+
+        function showWechatGuide() {
+            try {
+                if (document.getElementsByClassName("j-guide").length > 0) return;
+                const e = document.createElement("div");
+                e.className = "j-guide", e.style.position = "fixed", e.style.left = "0px", e.style.top = "0px", e.style.right = "0px", e.style.bottom = "0px", e.style.backgroundColor = "rgba(0, 0, 0, 0.8)", e.style.zIndex = "9999";
+                const t = new Image;
+                t.src = "wechatmasktip.png", t.style.position = "absolute", t.style.width = "320px", t.style.top = "13px", t.style.right = "24px", e.appendChild(t), e.addEventListener("touchmove", (e => {
+                    e.stopPropagation(), e.preventDefault()
+                })), e.addEventListener("click", (t => {
+                    t.stopPropagation(), t.preventDefault(), e && document.body.removeChild(e)
+                })), document.body.appendChild(e)
+            } catch (e) {
+                console.error(e)
+            }
+        }
+
+        function isPc(){
+            let ua = navigator.userAgent;
+            let Agents = new Array("Android","iPhone","iPad","iPod","SymbianOS","Windows Phone");
+            let flag = true;
+            for (let i = 0; i < Agents.length; i++) {
+                if (ua.indexOf(Agents[i]) > 0){
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+        var params = new URLSearchParams(window.location.search).toString();
+        var invite_ident = getQueryString("a");
+        //var invite_code = getQueryString(invite_ident);
+        var invite_code = getQueryString("pi");
+      
+        //点击send_message 按钮
+        $(".send_message").click(function(){
+            appurl = "chative://invite/?" + params;
+            window.location.replace(appurl);
+            var openurl = $(".download").attr("href");
+            setTimeout(function(){
+                $(".user_info").hide();
+                $(".join_info").show();
+            },3000);
+        });
+        $(".group_error_butten").click(function(){
+            window.open("/");
+        });
+      
+        //点击返回按钮
+        $(".join_content_cancel").click(function(){
+            $(".user_info").show();
+            $(".join_info").hide();
+        });
+      
+        if (isIosOrAndroid() === 'Ios'){
+            $(".user-content").show();
+            $(".user-content_index").hide();
+            $(".bs-docs-footer").show();
+            $(".download").attr("href","https://apps.apple.com/hk/app/chative/id6443719300?l=en");
+
+            $(".join_content_Download").click(function(){
+                window.open("https://apps.apple.com/hk/app/chative/id6443719300?l=en");
+                $(".user_info").show();
+                $(".join_info").hide();
+            });
+
+        } else if (isIosOrAndroid() === 'Android'){
+            $(".user-content").show();
+            $(".user-content_index").hide();
+            $(".bs-docs-footer").show();
+            $(".download").attr("href","https://d.temptalk.app/d/TempTalk-android-latest.apk");
+            $(".join_content_Download").click(function(){
+                window.open("https://d.temptalk.app/d/TempTalk-android-latest.apk");
+                $(".user_info").show();
+                $(".join_info").hide();
+            });
+        }else{
+            $(".user-content").hide();
+            $(".user-content_index").show();
+            $(".bs-docs-footer").hide();
+        }
+
+        new QRCode(document.getElementById('qrcode'),{
+            render:'canvas',
+            text: "https://temptalk.app/u/index.html?" + params,
+            correctLevel: QRCode.CorrectLevel.H,
+            width:220,
+            height:220,
+            colorDark: '#000000',
+            colorLight: '#ffffff',
+        })
+        // $("#qrcode canvas")[0].getContext('2d')
+        //     .drawImage($("#logo")[0],90,90,60,60);
+      
+
+        //请求URL地址 https://www.test.chative.im/v3/web/userinfo?i='+pi
+        //./json/user_info.json
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            //url: "./json/user_info.json",
+            //url: "./json/group_error.json",
+            //url: "./json/user_error.json",
+            url:"https://web.chative.com/v3/web/userinfo?i="+invite_code,
+            data: "",
+            success: function(msg){
+                if(msg.status == 0){
+                    $(".user_name").html(htmlEscape(msg.data.name));
+                    //alert(msg.data.avatarContent);
+                    $(".user_pic").attr("src","data:image/png;base64,"+base64Escape(msg.data.avatarContent));
+                }else{
+                    $("#group_error").show();
+                    $("#user_error").show();
+                    $(".user_info").hide();
+                    $("#user_error_content").html(htmlEscape(msg.reason));
+                    $("#group_error_content").html(htmlEscape(msg.reason));
+                }
+            },
+            error : function(){
+                // alert("用户信息请求失败");
+            }
+        });
+
+        if (isWechat()) {
+            showWechatGuide();
+        }
+
+        appurl = "chative://invite/?" + params;
+
+        if(isMac()) {
+            appurl = "chative://localaction/invite?" + params;
+        }
+
+        //icon 不显示，设置一下延时
+        setTimeout(()=>{
+            window.location.replace(appurl);
+        },100)
+        // window.location.replace(appurl);
+    });
+    
+    
+
+</script>
+</body>
+</html>
