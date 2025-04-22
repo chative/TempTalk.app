@@ -30,6 +30,22 @@
             window.location.href = 'index_m.html';
         }
     </script>
+    <script type="text/javascript">
+      // 获取当前的域名
+      var currentHost = window.location.hostname;
+
+      // 判断当前域名是否是 test.chative.im 或 www.test.chative.im
+      if (
+        currentHost === "test.chative.im" ||
+        currentHost === "www.test.chative.im"
+      ) {
+        // 执行跳转到 https://test.temptalk.app，保留原路径和查询参数
+        window.location.href =
+          "https://test.temptalk.app" +
+          window.location.pathname +
+          window.location.search;
+      }
+    </script>
 </head>
 <body style="background: #1E2329;">
 <div class="header">
