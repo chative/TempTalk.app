@@ -13,6 +13,22 @@
 <!--    <link rel="icon" href="../images/logo_new.png" type="image/x-icon"/>-->
     <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
     <link href="css/landingpage.css?id=68" rel="stylesheet">
+    <script type="text/javascript">
+      // 获取当前的域名
+      var currentHost = window.location.hostname;
+
+      // 判断当前域名是否是 chative.com 或 www.chative.com
+      if (
+        currentHost === "chative.com" ||
+        currentHost === "www.chative.com"
+      ) {
+        // 执行跳转到 https://temptalk.app，保留原路径和查询参数
+        window.location.href =
+          "https://temptalk.app" +
+          window.location.pathname +
+          window.location.search;
+      }
+    </script>
 </head>
 <body>
 <div class="header">
